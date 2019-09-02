@@ -45,14 +45,25 @@ function countUniqueValuesUsingPointers(arr) {
  *        j
  *
  * fourth iteration
- * i = 1
+ * i = 0
  * j = 3
+ * arr[j] !== to arr[i]
+ *  i
+ * [1, 1, 1, 2]
+ *           j
+ * we first increment i by one
+ *     i
+ * [1, 1, 1, 2]
+ *           j
+ * then replace arr[i] with the value of arr[j]
  *     i
  * [1, 2, 1, 2]
  *           j
- * we are hit array.length
+ *
+ * because we hit the length of the array we will evaluate the current position of i
  * current value of i = 1
- * we will return i + 1 = 2
+ *
+ * we will return i + 1 = 2 which is the number of unique values in the array
  **/
 
 module.exports = { countUniqueValues, countUniqueValuesUsingPointers }
