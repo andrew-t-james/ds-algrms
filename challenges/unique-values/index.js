@@ -27,7 +27,7 @@ function countUniqueValuesUsingPointers(arr) {
  * i = 0
  * j = 1
  *  i
- * [1, 1, 1, 1, 2]
+ * [1, 1, 1, 2]
  *     j
  * if they are NOT equal increment i assigning arr[i] the value of arr[j]
  *
