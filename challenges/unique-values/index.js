@@ -25,7 +25,7 @@ function countUniqueValuesUsingPointers(arr) {
 /**
  * first iteration i = 0 j = 1;
  * i = 0
- * j = 1
+ * j = 0
  *  i
  * [1, 1, 1, 2]
  *     j
@@ -33,13 +33,13 @@ function countUniqueValuesUsingPointers(arr) {
  *
  * second iteration
  * i = 0
- * j = 2
+ * j = 1
  *  i
  * [1, 1, 1, 2]
  *        j
  * third iteration
  * i = 0
- * j = 3
+ * j = 2
  *  i
  * [1, 1, 1, 2]
  *        j
