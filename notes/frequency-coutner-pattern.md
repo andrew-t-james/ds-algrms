@@ -65,7 +65,7 @@ function same(arr1, arr2) {
       return false
     }
 
-    // next check if the values correspond two number 2 in frequencyCount1 we should have { 4: 2 }  in frequencyCount2
+    // check if the key squared matches frequencyCount1[key] || { 4: 1 }
     if(frequencyCount2[key ** 2] !== frequencyCount1[key]) {
       return false
     }
