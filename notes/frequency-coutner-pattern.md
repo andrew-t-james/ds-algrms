@@ -74,6 +74,7 @@ function same(arr1, arr2) {
 }
 
 same([2, 4], [16, 4]) // true
+same([1, 2, 3], [4, 1, 9]) // true
 same([2], [8, 4]) // false
 
 ```
