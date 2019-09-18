@@ -27,3 +27,9 @@ function findClosestValueInBst(tree, target) {
 
   return Number(closest) // convert key from string to Num
 }
+
+function findClosestValueInBstTwo(tree, target) {
+  // check if tree/
+}
+
+module.exports = { findClosestValueInBst, findClosestValueInBstTwo }
