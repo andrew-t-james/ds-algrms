@@ -44,10 +44,28 @@ function findClosestValueInBstTwo(tree, target, closest = Infinity) {
   }
 }
 
+function findClosestValueInBstThree(tree, target, closest = Infinity) {
+  let currentNode = tree
+
+  while (currentNode !== null) {
+    if (Math.abs(target - closest) > Math.abs(target - currentNode.value)) {
+      closest = currentNode.value
+    }
+
+    if (target < currentNode.value) {
+      currentNode = currentNode.left
+    } else if (target > currentNode.value) {
+      currentNode = currentNode.right
+    } else {
+      break
+    }
+  }
+
+  return closest
 }
 
-function findClosestValueInBstTwo(tree, target) {
-  // check if tree/
+module.exports = {
+  findClosestValueInBst,
+  findClosestValueInBstTwo,
+  findClosestValueInBstThree
 }
-
-module.exports = { findClosestValueInBst, findClosestValueInBstTwo }
