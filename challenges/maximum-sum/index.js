@@ -64,15 +64,35 @@ function maximumSumBruteForce(arr, n) {
   return max
 }
 
-function maximumSum(arr, n) {
+function maximumSum(arr, num) {
   /**
    * sliding window approach
    */
+  // handle edge case when num is to large for equation
+  if (arr.length < num) return null
+
   // iterate over the array until n creating a max sum
   // sum together the digits from arr[0] to n
   let maxSum = 0
   let tempSum = 0
-  for (let i = 0; i < num; i++) {}
+
+  /**
+   * iterate over array up to `num` to and assign that value to `maxSum`
+   */
+  for (let i = 0; i < num; i++) {
+    maxSum += arr[i]
+  }
+
+  // assign tempSum the value of maxSum
+  tempSum = maxSum
+
+  for (let j = num; j < arr.length; j++) {
+    // move the window up by one each iteration
+    tempSum = tempSum - arr[j - num] + arr[j]
+    // assign maxSum the return of Math.max(maxSum, tempSum)
+    maxSum = Math.max(maxSum, tempSum)
+  }
+  return maxSum
 }
 
 module.exports = { maximumSum, maximumSumBruteForce }
