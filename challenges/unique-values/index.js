@@ -6,7 +6,7 @@ function countUniqueValues(arr) {
   for (let num of arr) {
     lookup[num] = (lookup[num] || 0) + 1
   }
-  return Object.keys(lookup).length || undefined
+  return Object.keys(lookup).length
 }
 
 // alternative solution using pointers vs object lookup
