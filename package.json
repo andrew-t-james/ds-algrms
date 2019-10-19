@@ -7,15 +7,32 @@
     "@babel/core": "*",
     "@babel/preset-env": "*",
     "babel-eslint": "*",
+    "babel-jest": "*",
     "babel-loader": "*",
     "eslint": "*",
     "eslint-config-prettier": "*",
     "eslint-plugin-prettier": "*",
-    "prettier": "*",
-    "babel-jest": "*",
-    "jest": "*"
+    "husky": "3.0.9",
+    "jest": "*",
+    "jest-coverage-badges": "1.1.2",
+    "prettier": "*"
   },
   "scripts": {
-    "test": "jest --watch"
+    "test": "jest",
+    "test:badges": "npm run test:coverage  && jest-coverage-badges",
+    "test:coverage": "npm test -- --coverage",
+    "test:watch": "jest --watch"
+  },
+  "jest": {
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test:badges"
+    }
   }
 }
