@@ -32,7 +32,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test:badges && git add ."
+      "pre-push": "npm run test:badges && git add ."
     }
   }
 }
