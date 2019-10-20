@@ -1,4 +1,5 @@
-const bst = require('./Bst')
+const bst = require('./setup')
+
 const {
   findClosestValueInBst,
   findClosestValueInBstTwo,
