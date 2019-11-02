@@ -3,19 +3,19 @@ const LinkedList = require('.')
 describe('LinkedList', () => {
   test('should append new Node into LinkedList', () => {
     const list = new LinkedList()
-    expect(list.head.data).toBe(null)
+    expect(list.head).toBe(null)
     list.append(1)
-    expect(list.head.next.data).toBe(1)
+    expect(list.head.data).toBe(1)
     list.append(2)
-    expect(list.head.next.next.data).toBe(2)
+    expect(list.head.next.data).toBe(2)
   })
 
   test('should append Node at a position in LinkedList', () => {
     const list = new LinkedList()
     const expected = {
       head: {
-        data: null,
-        next: { data: 1, next: { data: 3, next: { data: 2, next: null } } }
+        data: 1,
+        next: { data: 3, next: { data: 2, next: null } }
       }
     }
     list.append(1)
@@ -26,7 +26,6 @@ describe('LinkedList', () => {
 
   test('should return length of LinkedList', () => {
     const list = new LinkedList()
-    expect(list.length()).toBe(0)
     list.append(1)
     expect(list.length()).toBe(1)
     list.append(2)
@@ -46,6 +45,24 @@ describe('LinkedList', () => {
     list.append(1)
     list.append(2)
     list.append(3)
-    expect(list.display()).toBe(' 1 2 3')
+    expect(list.display()).toBe('1 2 3')
+  })
+
+  test('should return traverse Nodes and update data of that Node', () => {
+    const list = new LinkedList()
+    const expected = {
+      head: {
+        data: 11,
+        next: { data: 12, next: { data: 3, next: null } }
+      }
+    }
+    list.append(1)
+    list.append(2)
+    list.append(3)
+    list.traverse(node => {
+      node.data += 10
+    })
+    console.log(JSON.stringify(list, null, 2))
+    expect(list).toEqual(expected)
   })
 })

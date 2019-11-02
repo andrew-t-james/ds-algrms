@@ -2,12 +2,18 @@ const Node = require('../Node')
 
 class LinkedList {
   constructor() {
-    this.head = new Node()
+    this.head = null
   }
 
   append(data) {
     let current = this.head
     let newNode = new Node(data)
+
+    if (!current) {
+      this.head = newNode
+      return
+    }
+
     while (current.next !== null) {
       current = current.next
     }
@@ -16,18 +22,20 @@ class LinkedList {
 
   appendAt(pos, data) {
     let current = this.head
-    let counter = 0
+    let counter = 1
     const newNode = new Node(data)
+    if (!current) {
+      this.head = newNode
+      return
+    }
     while (current.next !== null) {
       if (pos === counter) {
         newNode.next = current.next
         current.next = newNode
-        // return true
       }
       current = current.next
       counter++
     }
-    // return false
   }
 
   remove() {}
@@ -39,8 +47,12 @@ class LinkedList {
   swap() {}
 
   length() {
-    let counter = 0
     let current = this.head
+
+    if (!current) return 0
+
+    let counter = 1
+
     while (current.next !== null) {
       current = current.next
       counter++
@@ -60,6 +72,14 @@ class LinkedList {
       current = current.next
     }
     return elements.join(' ')
+  }
+
+  traverse(fn) {
+    let current = this.head
+    while (current.next !== null) {
+      fn(current)
+      current = current.next
+    }
   }
 
   search() {}
