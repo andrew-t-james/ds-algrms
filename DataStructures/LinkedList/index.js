@@ -5,7 +5,14 @@ class LinkedList {
     this.head = new Node()
   }
 
-  append(data) {}
+  append(data) {
+    let current = this.head
+    let newNode = new Node(data)
+    while (current.next !== null) {
+      current = current.next
+    }
+    current.next = newNode
+  }
 
   appendAt() {}
 
