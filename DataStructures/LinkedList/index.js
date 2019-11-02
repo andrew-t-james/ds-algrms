@@ -14,7 +14,21 @@ class LinkedList {
     current.next = newNode
   }
 
-  appendAt() {}
+  appendAt(pos, data) {
+    let current = this.head
+    let counter = 0
+    const newNode = new Node(data)
+    while (current.next !== null) {
+      if (pos === counter) {
+        newNode.next = current.next
+        current.next = newNode
+        // return true
+      }
+      current = current.next
+      counter++
+    }
+    // return false
+  }
 
   remove() {}
 
