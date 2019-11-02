@@ -24,7 +24,15 @@ class LinkedList {
 
   swap() {}
 
-  length() {}
+  length() {
+    let counter = 0
+    let current = this.head
+    while (current.next !== null) {
+      current = current.next
+      counter++
+    }
+    return counter
+  }
 
   traverse() {}
 
