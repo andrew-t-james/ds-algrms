@@ -32,4 +32,11 @@ describe('LinkedList', () => {
     list.append(2)
     expect(list.length()).toBe(2)
   })
+
+  test('should return boolean based on LinkedList length', () => {
+    const list = new LinkedList()
+    expect(list.empty()).toBe(true)
+    list.append(1)
+    expect(list.empty()).toBe(false)
+  })
 })
