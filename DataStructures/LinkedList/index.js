@@ -41,8 +41,4 @@ class LinkedList {
   search() {}
 }
 
-const list = new LinkedList()
-// console.log(JSON.stringify(list, null, 2))
-list.append(12)
-console.log(JSON.stringify(list, null, 2))
 module.exports = LinkedList
