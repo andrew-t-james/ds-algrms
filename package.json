@@ -21,7 +21,8 @@
     "test": "jest",
     "test:badges": "npm run test:coverage  && jest-coverage-badges",
     "test:coverage": "npm test -- --coverage",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "view:coverage": "open coverage/lcov-report/index.html"
   },
   "jest": {
     "coverageReporters": [
