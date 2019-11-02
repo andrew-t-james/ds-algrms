@@ -52,7 +52,7 @@ class LinkedList {
     return this.length() < 1
   }
 
-  traverse() {
+  display() {
     let current = this.head
     let elements = []
     while (current !== null) {
@@ -61,8 +61,6 @@ class LinkedList {
     }
     return elements.join(' ')
   }
-
-  display() {}
 
   search() {}
 }
