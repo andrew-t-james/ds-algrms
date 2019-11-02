@@ -39,4 +39,13 @@ describe('LinkedList', () => {
     list.append(1)
     expect(list.empty()).toBe(false)
   })
+
+  test('should return traverse Nodes and return sting of data from Nodes', () => {
+    const list = new LinkedList()
+    expect(list.empty()).toBe(true)
+    list.append(1)
+    list.append(2)
+    list.append(3)
+    expect(list.traverse()).toBe(' 1 2 3')
+  })
 })
