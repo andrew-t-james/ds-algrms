@@ -7,8 +7,21 @@ describe('LinkedList', () => {
     list.append(1)
     expect(list.head.next.data).toBe(1)
     list.append(2)
-    console.log(JSON.stringify(list, null, 2))
     expect(list.head.next.next.data).toBe(2)
+  })
+
+  test('should append Node at a position in LinkedList', () => {
+    const list = new LinkedList()
+    const expected = {
+      head: {
+        data: null,
+        next: { data: 1, next: { data: 3, next: { data: 2, next: null } } }
+      }
+    }
+    list.append(1)
+    list.append(2)
+    list.appendAt(1, 3)
+    expect(list).toEqual(expected)
   })
 
   test('should return length of LinkedList', () => {
