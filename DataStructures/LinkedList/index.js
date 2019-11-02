@@ -52,7 +52,15 @@ class LinkedList {
     return this.length() < 1
   }
 
-  traverse() {}
+  traverse() {
+    let current = this.head
+    let elements = []
+    while (current !== null) {
+      elements.push(current.data)
+      current = current.next
+    }
+    return elements.join(' ')
+  }
 
   display() {}
 
