@@ -48,6 +48,10 @@ class LinkedList {
     return counter
   }
 
+  empty() {
+    return this.length() < 1
+  }
+
   traverse() {}
 
   display() {}
