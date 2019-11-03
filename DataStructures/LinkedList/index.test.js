@@ -53,7 +53,7 @@ describe('LinkedList', () => {
     const expected = {
       head: {
         data: 11,
-        next: { data: 12, next: { data: 3, next: null } }
+        next: { data: 12, next: { data: 13, next: null } }
       }
     }
     list.append(1)
@@ -62,7 +62,6 @@ describe('LinkedList', () => {
     list.traverse(node => {
       node.data += 10
     })
-    console.log(JSON.stringify(list, null, 2))
     expect(list).toEqual(expected)
   })
 })

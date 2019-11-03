@@ -76,7 +76,7 @@ class LinkedList {
 
   traverse(fn) {
     let current = this.head
-    while (current.next !== null) {
+    while (current) {
       fn(current)
       current = current.next
     }
