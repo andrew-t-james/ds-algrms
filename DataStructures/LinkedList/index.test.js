@@ -56,6 +56,10 @@ describe('LinkedList', () => {
         next: { data: 12, next: { data: 13, next: null } }
       }
     }
+    list.traverse(node => {
+      node.data += 10000
+    })
+    expect(list).toEqual({ head: null })
     list.append(1)
     list.append(2)
     list.append(3)
@@ -63,5 +67,13 @@ describe('LinkedList', () => {
       node.data += 10
     })
     expect(list).toEqual(expected)
+  })
+
+  test('should return false || index if value exists in list', () => {
+    const list = new LinkedList()
+    expect(list.empty()).toBe(true)
+    list.append(2)
+    list.append(1)
+    expect(list.search(1)).toBe(1)
   })
 })

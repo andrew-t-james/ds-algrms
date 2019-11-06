@@ -48,16 +48,13 @@ class LinkedList {
 
   length() {
     let current = this.head
-
+    let count = 1
     if (!current) return 0
-
-    let counter = 1
-
     while (current.next !== null) {
       current = current.next
-      counter++
+      count++
     }
-    return counter
+    return count
   }
 
   empty() {
@@ -67,6 +64,7 @@ class LinkedList {
   display() {
     let current = this.head
     let elements = []
+    if (!current) return
     while (current !== null) {
       elements.push(current.data)
       current = current.next
@@ -76,13 +74,27 @@ class LinkedList {
 
   traverse(fn) {
     let current = this.head
+    if (!current) return
     while (current) {
       fn(current)
       current = current.next
     }
   }
 
-  search() {}
+  search(data) {
+    let current = this.head
+    let counter = 0
+    if (!current) return
+
+    while (current) {
+      if (current.data === data) {
+        return counter
+      }
+      current = current.next
+      counter++
+    }
+    return false
+  }
 }
 
 module.exports = LinkedList
