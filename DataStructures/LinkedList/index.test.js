@@ -95,4 +95,24 @@ describe('LinkedList', () => {
     expect(list.length()).toBe(2)
     expect(list).toEqual(expected)
   })
+
+  test('should return remove data from tail of LinkedList', () => {
+    let list = new LinkedList()
+    const expected = {
+      head: {
+        data: 1,
+        next: {
+          data: 2,
+          next: null
+        }
+      }
+    }
+    expect(list.empty()).toBe(true)
+    list.append(1)
+    list.append(2)
+    list.append(3)
+    list.remove(3)
+    expect(list.length()).toBe(2)
+    expect(list).toEqual(expected)
+  })
 })
