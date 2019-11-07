@@ -38,7 +38,26 @@ class LinkedList {
     }
   }
 
-  remove() {}
+  remove(data) {
+    let current = this.head
+
+    if (current.data === data) {
+      this.head = current.next
+    } else {
+      let previous = current
+      while (current.next) {
+        if (current.data === data) {
+          previous.next = current.next
+          return
+        }
+        previous = current
+        current = current.next
+      }
+      if (current.data === data) {
+        previous.next = null
+      }
+    }
+  }
 
   removeAt() {}
 
