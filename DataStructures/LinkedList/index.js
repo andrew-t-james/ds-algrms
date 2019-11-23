@@ -60,18 +60,26 @@ class LinkedList {
   }
 
   removeAt(pos) {
+    if (pos > this.length()) {
+      return 'No Node'
+    }
+    if (pos === this.length()) {
+      this.head = null
+    }
     let current = this.head
-    let counter = 0
-    let previous = current
-    while (current.next !== null) {
-      // console.log('pos:', counter)
-      if (pos === counter) {
-        previous.next = current.next
-        // current.next = newNode
-        return
-      }
+    let counter = 1
+    while (current !== null) {
+      let previous = current
       current = current.next
+      if (counter === pos) {
+        if (current === null) {
+          // console.log({ previous, current: current.next, counter })
+          previous.next = null
+        }
+        previous.next = current.next
+      }
       counter++
+      // console.log({ previous, current, counter })
     }
   }
 
