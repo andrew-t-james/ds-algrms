@@ -59,7 +59,21 @@ class LinkedList {
     }
   }
 
-  removeAt() {}
+  removeAt(pos) {
+    let current = this.head
+    let counter = 0
+    let previous = current
+    while (current.next !== null) {
+      // console.log('pos:', counter)
+      if (pos === counter) {
+        previous.next = current.next
+        // current.next = newNode
+        return
+      }
+      current = current.next
+      counter++
+    }
+  }
 
   reverse() {}
 
@@ -113,6 +127,18 @@ class LinkedList {
       counter++
     }
     return false
+  }
+
+  print() {
+    if (!this.head) {
+      return
+    }
+
+    let node = this.head
+    while (node) {
+      console.log(node.data)
+      node = node.next
+    }
   }
 }
 

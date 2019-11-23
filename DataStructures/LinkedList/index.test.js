@@ -136,4 +136,26 @@ describe('LinkedList', () => {
     expect(list.length()).toBe(2)
     expect(list).toEqual(expected)
   })
+
+  test('should remove Node at position from LinkedList', () => {
+    let list = new LinkedList()
+    const expected = {
+      head: {
+        data: 1,
+        next: {
+          data: 3,
+          next: null
+        }
+      }
+    }
+    expect(list.empty()).toBe(true)
+    list.append(1)
+    list.append(2)
+    list.append(6)
+    list.append(3)
+    list.removeAt(2)
+
+    expect(list.length()).toBe(2)
+    expect(list).toEqual(expected)
+  })
 })
