@@ -72,14 +72,9 @@ class LinkedList {
       let previous = current
       current = current.next
       if (counter === pos) {
-        if (current === null) {
-          // console.log({ previous, current: current.next, counter })
-          previous.next = null
-        }
         previous.next = current.next
       }
       counter++
-      // console.log({ previous, current, counter })
     }
   }
 
@@ -133,19 +128,6 @@ class LinkedList {
       }
       current = current.next
       counter++
-    }
-    return false
-  }
-
-  print() {
-    if (!this.head) {
-      return
-    }
-
-    let node = this.head
-    while (node) {
-      console.log(node.data)
-      node = node.next
     }
   }
 }

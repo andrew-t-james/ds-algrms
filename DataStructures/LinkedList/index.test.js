@@ -18,6 +18,9 @@ describe('LinkedList', () => {
         next: { data: 3, next: { data: 2, next: null } }
       }
     }
+    list.appendAt(1, 3)
+    expect(list).toEqual({ head: { data: 3, next: null } })
+    list.remove(3)
     list.append(1)
     list.append(2)
     list.appendAt(1, 3)
@@ -137,7 +140,7 @@ describe('LinkedList', () => {
     expect(list).toEqual(expected)
   })
 
-  test.only('should remove Node at position from LinkedList', () => {
+  test('should remove Node at position from LinkedList', () => {
     let list = new LinkedList()
     const expected = {
       head: {
@@ -156,5 +159,7 @@ describe('LinkedList', () => {
 
     list.removeAt(1)
     expect(list.length()).toBe(0)
+    list.removeAt(1)
+    expect(list.removeAt(1)).toBe('No Node')
   })
 })
