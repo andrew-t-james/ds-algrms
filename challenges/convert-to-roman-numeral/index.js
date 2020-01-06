@@ -17,6 +17,13 @@ function convertToRoman(num) {
     I: 1
   }
 
+  for (let i in map) {
+    while (num >= map[i]) {
+      total += i
+      num -= map[i]
+    }
+  }
+
   return total
 }
 
