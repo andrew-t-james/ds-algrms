@@ -7,6 +7,7 @@ test('Test Case substring', () => {
   expect(strStr('hello', 'lll')).toBe(-1)
   expect(strStr('hello', 'h')).toBe(0)
   expect(strStr('hello', 'hellohello')).toBe(-1)
+  expect(strStr('hello', 'hello')).toBe(0)
 })
 
 test('Test Case sliding window', () => {
@@ -16,4 +17,6 @@ test('Test Case sliding window', () => {
   expect(slidingStr('hello', 'lll')).toBe(-1)
   expect(slidingStr('hello', 'h')).toBe(0)
   expect(slidingStr('hello', 'hellohello')).toBe(-1)
+  expect(slidingStr('hello', 'hello')).toBe(0)
+  expect(slidingStr('hello', 'hello')).toBe(0)
 })

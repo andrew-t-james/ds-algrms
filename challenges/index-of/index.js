@@ -32,7 +32,9 @@ function slidingStr(haystack, needle) {
   for (let i = 0; i < haystack.length; i++) {
     let sub = needle[0]
     if (haystack[i] === sub) {
-      if (sub !== needle) sub += needle[i - needle.length]
+      if (sub !== needle) {
+        sub += i === 0 ? needle.slice(i + 1) : needle[i - needle.length]
+      }
       if (sub === needle) {
         return i
       }
