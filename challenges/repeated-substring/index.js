@@ -19,8 +19,25 @@
  */
 
 function repeatedSubstringPattern(s) {
-  // iterate over string
+  if (s.length % 2 !== 0 || !s.length) return false
+  const seen = {}
+  let leftWindow = 0
+  let pattern = ''
+
+  // for (let char of s) {
+  //   seen[char] = (seen[char] || 0) + 1
+  // }
+
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] !== s[i + 1] && !seen[s[i]]) {
+      console.log('AAAAAAAAAAAAAAAAAAAA')
+      console.log(s[i], i)
+      pattern += s[i]
+    }
+    seen[s[i]] = (seen[s[i]] || 0) + 1
+  }
+  console.log('seen:', { seen, pattern })
   return false
 }
-
+repeatedSubstringPattern('abab')
 module.exports = repeatedSubstringPattern
