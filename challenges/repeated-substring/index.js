@@ -20,24 +20,25 @@
 
 function repeatedSubstringPattern(s) {
   if (s.length % 2 !== 0 || !s.length) return false
-  const seen = {}
   let leftWindow = 0
   let pattern = ''
+  const seen = {}
 
-  // for (let char of s) {
-  //   seen[char] = (seen[char] || 0) + 1
-  // }
+  // eslint-disable-next-line prettier/prettier
+  for (let rightWindow = 0; rightWindow < s.length;) {
+    seen[s[rightWindow]] = (seen[s[rightWindow]] || 0) + 1
 
-  for (let i = 0; i < s.length; i++) {
-    if (s[i] !== s[i + 1] && !seen[s[i]]) {
-      console.log('AAAAAAAAAAAAAAAAAAAA')
-      console.log(s[i], i)
-      pattern += s[i]
+    if (seen[s[rightWindow]] > 1) {
+      seen[s[leftWindow]] -= 1
+      leftWindow++
+      console.log(seen, leftWindow)
     }
-    seen[s[i]] = (seen[s[i]] || 0) + 1
+
+    // pattern = s[rightWindow - leftWindow]
+    rightWindow++
   }
-  console.log('seen:', { seen, pattern })
+  console.log({ seen, leftWindow, pattern })
   return false
 }
-repeatedSubstringPattern('abab')
+repeatedSubstringPattern('helhol')
 module.exports = repeatedSubstringPattern
