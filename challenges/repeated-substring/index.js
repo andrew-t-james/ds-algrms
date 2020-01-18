@@ -20,24 +20,36 @@
 
 function repeatedSubstringPattern(s) {
   if (s.length % 2 !== 0 || !s.length) return false
-  let leftWindow = 0
-  let pattern = ''
   const seen = {}
+  let pattern = ''
+  let leftWindow = 0
+  let count = 0
 
-  // eslint-disable-next-line prettier/prettier
-  for (let rightWindow = 0; rightWindow < s.length;) {
-    seen[s[rightWindow]] = (seen[s[rightWindow]] || 0) + 1
-
-    if (seen[s[rightWindow]] > 1) {
-      seen[s[leftWindow]] -= 1
-      leftWindow++
-      console.log(seen, leftWindow)
+  for (let char of s) {
+    if (!seen[char]) {
+      seen[char] = 0
+      pattern += char
     }
-
-    // pattern = s[rightWindow - leftWindow]
-    rightWindow++
+    if (seen[char]) break
+    seen[char] += 1
   }
-  console.log({ seen, leftWindow, pattern })
+  let temp = ''
+  // eslint-disable-next-line prettier/prettier
+  for (let i = leftWindow; i < pattern.length;) {
+
+    if (s[i] === pattern[i]) {
+      temp += s[i]
+
+      if (temp === pattern) {
+        count += 1
+        temp = ''
+      }
+    }
+    console.log('temp', { i, count })
+    i++
+  }
+
+  console.log('seen:', { seen, pattern })
   return false
 }
 repeatedSubstringPattern('helhol')
