@@ -19,38 +19,13 @@
  */
 
 function repeatedSubstringPattern(s) {
-  if (s.length % 2 !== 0 || !s.length) return false
-  const seen = {}
+  if (s.length < 2) return false
   let pattern = ''
-  let leftWindow = 0
-  let count = 0
-
-  for (let char of s) {
-    if (!seen[char]) {
-      seen[char] = 0
-      pattern += char
-    }
-    if (seen[char]) break
-    seen[char] += 1
-  }
-  let temp = ''
-  // eslint-disable-next-line prettier/prettier
-  for (let i = leftWindow; i < pattern.length;) {
-
-    if (s[i] === pattern[i]) {
-      temp += s[i]
-
-      if (temp === pattern) {
-        count += 1
-        temp = ''
-      }
-    }
-    console.log('temp', { i, count })
-    i++
+  for (let i = 0; i < s.length / 2; i++) {
+    pattern += s[i]
+    if (!s.split(pattern).join('').length) return true
   }
 
-  console.log('seen:', { seen, pattern })
   return false
 }
-repeatedSubstringPattern('helhol')
 module.exports = repeatedSubstringPattern
