@@ -16,4 +16,28 @@ function mergeSortedLists(arr1, arr2) {
   return [...arr1, ...arr2].sort((a, b) => a - b)
 }
 
-module.exports = { merge, mergeSortedLists  }
+function mergeSortedListsAnotherWay(arr1, arr2) {
+  let merged = []
+  let i = 0
+  let j = 0
+
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] <= arr2[j]) {
+      merged.push(arr1[i])
+      i++
+    } else {
+      merged.push(arr2[j])
+      j++
+    }
+  }
+
+  if (i <= arr1.length - 1) {
+    merged = merged.concat(arr1.slice(i))
+  } else if (j <= arr2.length - 1) {
+    merged = merged.concat(arr2.slice(i))
+  }
+
+  return merged
+}
+
+module.exports = { merge, mergeSortedLists, mergeSortedListsAnotherWay }
