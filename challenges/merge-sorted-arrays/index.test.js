@@ -13,3 +13,22 @@ test('shold sort array in place', () => {
   const expected = [1, 2, 2, 3, 4, 5, 6, 6]
   expect(nums1).toEqual(expected)
 })
+
+test('should sort merge and sort two lists', () => {
+  const arr1 = [1, 3, 6, 8, 8, 9]
+  const arr2 = [1, 2, 2, 3, 5, 6]
+  expect(mergeSortedLists(arr1, arr2)).toEqual([
+    1,
+    1,
+    2,
+    2,
+    3,
+    3,
+    5,
+    6,
+    6,
+    8,
+    8,
+    9
+  ])
+})

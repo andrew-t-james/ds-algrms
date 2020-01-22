@@ -12,4 +12,8 @@ function merge(nums1, m, nums2, n) {
   nums1.sort((a, b) => a - b)
 }
 
-module.exports = merge
+function mergeSortedLists(arr1, arr2) {
+  return [...arr1, ...arr2].sort((a, b) => a - b)
+}
+
+module.exports = { merge, mergeSortedLists  }
