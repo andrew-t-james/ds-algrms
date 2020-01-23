@@ -1,3 +1,4 @@
 module.exports = {
-  ...require('./logUtils')
+  ...require('./logUtils'),
+  ...require('./helpers')
 }
