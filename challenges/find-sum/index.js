@@ -28,5 +28,4 @@ function findSum(arr, value) {
   return false
 }
 
-// console.log(findSum([1, 21, 3, 14, 5, 60, 7, 6], 81))
 module.exports = { findSumBruteForce, findSum }
