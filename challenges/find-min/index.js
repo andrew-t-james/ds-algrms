@@ -3,4 +3,12 @@ function findMinWithSort(arr) {
   return arr.sort((a, b) => a - b)[0]
 }
 
-module.exports = { findMinWithSort }
+function findMinWithOutSort(arr) {
+  let min = arr[0]
+  for (let n in arr) {
+    if (arr[n] < min) min = arr[n]
+  }
+  return min
+}
+
+module.exports = { findMinWithSort, findMinWithOutSort }
