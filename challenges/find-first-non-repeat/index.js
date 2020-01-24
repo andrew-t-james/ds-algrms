@@ -9,4 +9,20 @@ function findFirstUnique(arr) {
   return curr
 }
 
-module.exports = { findFirstUnique }
+function findFirstUniqueDictionary(arr) {
+  const seen = {}
+
+  for (let num of arr) {
+    seen[num] = (seen[num] || 0) + 1
+  }
+
+  for (let key in arr) {
+    if (seen[arr[key]] === 1) {
+      return arr[key]
+    }
+  }
+
+  return seen
+}
+
+module.exports = { findFirstUnique, findFirstUniqueDictionary }
