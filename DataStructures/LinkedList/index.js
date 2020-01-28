@@ -91,6 +91,28 @@ class LinkedList {
     return this
   }
 
+  deleteByValue(value) {
+    if (this.isEmpty) return false
+
+    let current = this.getHeadNode
+    let deleted = false
+
+    if (current.data === value) {
+      this.deleteAtHead()
+      deleted = true
+    }
+
+    while (current.next !== null) {
+      if (current.next.data === value) {
+        current.next = current.next.next
+        return true
+      }
+      current = current.next
+    }
+
+    return deleted
+  }
+
   get getHeadNode() {
     return this.head
   }

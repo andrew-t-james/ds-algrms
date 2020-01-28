@@ -100,4 +100,36 @@ describe('LinkedList', () => {
       head: { data: 1, next: { data: 2, next: null } }
     })
   })
+
+  test('should delete node by value', () => {
+    const list = new LinkedList()
+
+    expect(list.deleteByValue()).toBe(false)
+    expect(list).toEqual({ head: null })
+
+    list.insertAtTail(1)
+    list.insertAtTail(2)
+    list.insertAtTail(3)
+
+    expect(list).toEqual({
+      head: { data: 1, next: { data: 2, next: { data: 3, next: null } } }
+    })
+
+    expect(list.deleteByValue(1)).toBe(true)
+
+    expect(list).toEqual({
+      head: { data: 2, next: { data: 3, next: null } }
+    })
+
+    list.insertAtHead(1)
+
+    expect(list).toEqual({
+      head: { data: 1, next: { data: 2, next: { data: 3, next: null } } }
+    })
+
+    expect(list.deleteByValue(2)).toBe(true)
+    expect(list).toEqual({
+      head: { data: 1, next: { data: 3, next: null } }
+    })
+  })
 })
