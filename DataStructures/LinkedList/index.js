@@ -78,8 +78,15 @@ class LinkedList {
   }
 
   deleteAtTail() {
+    if (this.isEmpty) return false
+
     let current = this.getHeadNode
     let previous
+
+    if (current.next === null) {
+      this.deleteAtHead()
+      return this
+    }
 
     while (current.next !== null) {
       previous = current
