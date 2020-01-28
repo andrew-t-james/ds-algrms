@@ -32,16 +32,16 @@ class LinkedList {
     if (this.isEmpty) {
       this.head = node
     } else {
-      let currentent = this.getHeadNode
+      let current = this.getHeadNode
       let previous
       let count = 0
       while (count < pos) {
-        previous = currentent
-        currentent = currentent.next
+        previous = current
+        current = current.next
         count++
       }
 
-      node.next = currentent
+      node.next = current
       previous.next = node
     }
 
@@ -67,6 +67,28 @@ class LinkedList {
     if (node.data === data) return true
 
     return this.recursiveSearch(node.next, data)
+  }
+
+  deleteAtHead() {
+    let headNode = this.getHeadNode
+
+    this.head = headNode.next
+
+    return this
+  }
+
+  deleteAtTail() {
+    let current = this.getHeadNode
+    let previous
+
+    while (current.next !== null) {
+      previous = current
+      current = current.next
+    }
+
+    previous.next = null
+
+    return this
   }
 
   get getHeadNode() {
