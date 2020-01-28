@@ -43,7 +43,7 @@ describe('LinkedList', () => {
     })
   })
 
-  test('should return true when searching for node', () => {
+  test('should return true/false when searching for node', () => {
     const list = new LinkedList()
     expect(list).toEqual({ head: null })
     list.insertAtTail(1)
@@ -53,6 +53,20 @@ describe('LinkedList', () => {
       head: { data: 1, next: { data: 2, next: { data: 3, next: null } } }
     })
     expect(list.search(1)).toBe(true)
+    expect(list.search(3)).toBe(true)
+    expect(list.search(5)).toBe(false)
+  })
+
+  test('should return true/false when recursive searching for node', () => {
+    const list = new LinkedList()
+    expect(list).toEqual({ head: null })
+    list.insertAtTail(1)
+    list.insertAtTail(2)
+    list.insertAtTail(3)
+    expect(list).toEqual({
+      head: { data: 1, next: { data: 2, next: { data: 3, next: null } } }
+    })
+    expect(list.recursiveSearch(list.head, 1)).toBe(true)
     expect(list.search(3)).toBe(true)
     expect(list.search(5)).toBe(false)
   })

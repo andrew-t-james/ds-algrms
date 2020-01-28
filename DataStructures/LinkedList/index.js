@@ -60,6 +60,15 @@ class LinkedList {
     return false
   }
 
+  recursiveSearch(node, data) {
+    // base case:
+    if (node === null) return false
+
+    if (node.data === data) return true
+
+    return this.recursiveSearch(node.next, data)
+  }
+
   get getHeadNode() {
     return this.head
   }
