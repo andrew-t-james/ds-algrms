@@ -17,11 +17,11 @@ class LinkedList {
     if (this.isEmpty) {
       this.head = node
     } else {
-      let curr = this.head
-      while (curr.next !== null) {
-        curr = curr.next
+      let current = this.head
+      while (current.next !== null) {
+        current = current.next
       }
-      curr.next = node
+      current.next = node
     }
 
     return this
@@ -32,20 +32,31 @@ class LinkedList {
     if (this.isEmpty) {
       this.head = node
     } else {
-      let current = this.getHeadNode
+      let currentent = this.getHeadNode
       let previous
       let count = 0
       while (count < pos) {
-        previous = current
-        current = current.next
+        previous = currentent
+        currentent = currentent.next
         count++
       }
 
-      node.next = current
+      node.next = currentent
       previous.next = node
     }
 
     return this
+  }
+
+  search(data) {
+    if (this.isEmpty) return false
+    let current = this.getHeadNode
+    while (current.next !== null) {
+      current = current.next
+      if (current.data === data) return true
+    }
+
+    return false
   }
 
   get getHeadNode() {

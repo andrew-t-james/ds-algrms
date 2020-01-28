@@ -38,9 +38,21 @@ describe('LinkedList', () => {
     list.insertAtTail(2)
     expect(list).toEqual({ head: { data: 1, next: { data: 2, next: null } } })
     list.insertAtPosition(3, 1)
-    // console.log('list:', list)
     expect(list).toEqual({
       head: { data: 1, next: { data: 3, next: { data: 2, next: null } } }
     })
+  })
+
+  test('should return true when searching for node', () => {
+    const list = new LinkedList()
+    expect(list).toEqual({ head: null })
+    list.insertAtTail(1)
+    list.insertAtTail(2)
+    list.insertAtTail(3)
+    expect(list).toEqual({
+      head: { data: 1, next: { data: 2, next: { data: 3, next: null } } }
+    })
+    expect(list.search(3)).toBe(true)
+    expect(list.search(5)).toBe(false)
   })
 })
