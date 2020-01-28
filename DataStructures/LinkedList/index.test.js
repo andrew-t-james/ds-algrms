@@ -52,6 +52,7 @@ describe('LinkedList', () => {
     expect(list).toEqual({
       head: { data: 1, next: { data: 2, next: { data: 3, next: null } } }
     })
+    expect(list.search(1)).toBe(true)
     expect(list.search(3)).toBe(true)
     expect(list.search(5)).toBe(false)
   })

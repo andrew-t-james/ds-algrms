@@ -51,6 +51,7 @@ class LinkedList {
   search(data) {
     if (this.isEmpty) return false
     let current = this.getHeadNode
+    if (current.data === data) return true
     while (current.next !== null) {
       current = current.next
       if (current.data === data) return true
