@@ -67,7 +67,37 @@ describe('LinkedList', () => {
       head: { data: 1, next: { data: 2, next: { data: 3, next: null } } }
     })
     expect(list.recursiveSearch(list.head, 1)).toBe(true)
-    expect(list.search(3)).toBe(true)
-    expect(list.search(5)).toBe(false)
+    expect(list.recursiveSearch(list.head, 3)).toBe(true)
+    expect(list.recursiveSearch(list.head, 5)).toBe(false)
+  })
+
+  test('should delete head node', () => {
+    const list = new LinkedList()
+    expect(list).toEqual({ head: null })
+    list.insertAtTail(1)
+    list.insertAtTail(2)
+    list.insertAtTail(3)
+    expect(list).toEqual({
+      head: { data: 1, next: { data: 2, next: { data: 3, next: null } } }
+    })
+    list.deleteAtHead()
+    expect(list).toEqual({
+      head: { data: 2, next: { data: 3, next: null } }
+    })
+  })
+
+  test('should delete tail node', () => {
+    const list = new LinkedList()
+    expect(list).toEqual({ head: null })
+    list.insertAtTail(1)
+    list.insertAtTail(2)
+    list.insertAtTail(3)
+    expect(list).toEqual({
+      head: { data: 1, next: { data: 2, next: { data: 3, next: null } } }
+    })
+    list.deleteAtTail()
+    expect(list).toEqual({
+      head: { data: 1, next: { data: 2, next: null } }
+    })
   })
 })
