@@ -38,11 +38,13 @@ describe('LinkedList', () => {
   test('should deleteAtTail', () => {
     const list = new LinkedList()
     expect(list).toEqual({ head: null, tail: null })
+
     list.insertAtHead(1)
     expect(list).toEqual({
       head: { data: 1, next: null, previous: null },
       tail: { data: 1, previous: null, next: null }
     })
+
     list.insertAtHead(2)
     expect(list).toEqual({
       head: {
@@ -56,10 +58,14 @@ describe('LinkedList', () => {
         next: null
       }
     })
+
     list.deleteAtTail()
     expect(list).toEqual({
       head: { data: 2, next: null, previous: null },
       tail: { data: 2, previous: null, next: null }
     })
+
+    list.deleteAtTail()
+    expect(list).toEqual({ head: null, tail: null })
   })
 })
