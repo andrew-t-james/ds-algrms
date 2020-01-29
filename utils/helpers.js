@@ -9,7 +9,7 @@ function pipeWith(arg, ...fns) {
 }
 
 const peek = array => array[0]
-const pop = array => array.shift()
+const pop = array => array.pop()
 
 module.exports = {
   pipe,
