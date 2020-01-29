@@ -39,6 +39,19 @@ class DoublyLinkedList {
     return this
   }
 
+  length() {
+    let current = this.head
+    let count = 0
+
+    if (this.isEmpty) return count
+
+    while (current !== null) {
+      current = current.next
+      count++
+    }
+    return count
+  }
+
   get isEmpty() {
     return this.head === null
   }
