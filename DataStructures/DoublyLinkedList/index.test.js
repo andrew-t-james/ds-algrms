@@ -67,5 +67,8 @@ describe('LinkedList', () => {
 
     list.deleteAtTail()
     expect(list).toEqual({ head: null, tail: null })
+
+    list.deleteAtTail()
+    expect(list).toEqual({ head: null, tail: null })
   })
 })
