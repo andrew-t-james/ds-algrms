@@ -60,6 +60,27 @@ class LinkedList {
     return false
   }
 
+  reverse() {
+    if (this.isEmpty) return this
+    let current = this.getHeadNode
+    let previous = null
+    let next = null
+
+    while (current !== null) {
+      next = current.next
+      current.next = previous
+      previous = current
+      current = next
+    }
+
+    this.setHead(previous)
+    return this
+  }
+
+  setHead(node) {
+    this.head = node
+  }
+
   recursiveSearch(node, data) {
     // base case:
     if (node === null) return false

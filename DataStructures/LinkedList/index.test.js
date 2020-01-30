@@ -132,4 +132,22 @@ describe('LinkedList', () => {
       head: { data: 1, next: { data: 3, next: null } }
     })
   })
+
+  test('should reverse linked list', () => {
+    const list = new LinkedList()
+    expect(list).toEqual({ head: null })
+
+    list.insertAtTail(1)
+    list.insertAtTail(2)
+    list.insertAtTail(3)
+
+    expect(list).toEqual({
+      head: { data: 1, next: { data: 2, next: { data: 3, next: null } } }
+    })
+
+    list.reverse()
+    expect(list).toEqual({
+      head: { data: 3, next: { data: 2, next: { data: 1, next: null } } }
+    })
+  })
 })
