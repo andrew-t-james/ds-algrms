@@ -154,6 +154,37 @@ class LinkedList {
     return deleted
   }
 
+  findMidNodeBruteForce() {
+    let current = this.getHeadNode
+    let count = 0
+    let midNode = null
+
+    if (this.isEmpty) return 'Empty LinkedList'
+
+    while (current !== null) {
+      current = current.next
+      count++
+    }
+
+    current = this.getHeadNode
+
+    let mid = Math.round(count / 2)
+
+    let currentCount = 0
+
+    while (current !== null) {
+      currentCount++
+
+      if (currentCount === mid) {
+        midNode = current.data
+      }
+
+      current = current.next
+    }
+
+    return midNode
+  }
+
   findMidNode() {
     let current = this.getHeadNode
     let count = 0
