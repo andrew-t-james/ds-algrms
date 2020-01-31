@@ -150,4 +150,23 @@ describe('LinkedList', () => {
       head: { data: 3, next: { data: 2, next: { data: 1, next: null } } }
     })
   })
+
+  test('should detect a circular reference in a linked list', () => {
+    const list = new LinkedList()
+    expect(list).toEqual({ head: null })
+
+    list.insertAtTail(1)
+    list.insertAtTail(2)
+    list.insertAtTail(3)
+
+    expect(list).toEqual({
+      head: { data: 1, next: { data: 2, next: { data: 3, next: null } } }
+    })
+
+    expect(list.detectLoop()).toBe(false)
+    list.head.next.next.next = list.head.next
+    expect(list.head.next.next.next.data).toBe(2)
+
+    expect(list.detectLoop()).toBe(true)
+  })
 })

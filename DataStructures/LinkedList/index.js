@@ -77,6 +77,19 @@ class LinkedList {
     return this
   }
 
+  detectLoop() {
+    let slow = this.getHeadNode
+    let fast = this.getHeadNode
+
+    while (fast && fast.next) {
+      slow = slow.next
+      fast = fast.next.next
+      if (slow === fast) return true
+    }
+
+    return false
+  }
+
   setHead(node) {
     this.head = node
   }
