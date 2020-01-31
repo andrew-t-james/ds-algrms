@@ -169,4 +169,46 @@ describe('LinkedList', () => {
 
     expect(list.detectLoop()).toBe(true)
   })
+
+  test('should return mid node', () => {
+    const list = new LinkedList()
+    expect(list).toEqual({ head: null })
+
+    expect(list.findMidNode()).toBe('Empty LinkedList')
+
+    let dataList = [1, 2, 3, 4]
+
+    for (let data of dataList) {
+      list.insertAtTail(data)
+    }
+
+    expect(list).toEqual({
+      head: {
+        data: 1,
+        next: { data: 2, next: { data: 3, next: { data: 4, next: null } } }
+      }
+    })
+
+    expect(list.findMidNode()).toBe(2)
+
+    dataList.push(5)
+
+    const newList = new LinkedList()
+
+    for (let data of dataList) {
+      newList.insertAtTail(data)
+    }
+
+    expect(newList).toEqual({
+      head: {
+        data: 1,
+        next: {
+          data: 2,
+          next: { data: 3, next: { data: 4, next: { data: 5, next: null } } }
+        }
+      }
+    })
+
+    expect(newList.findMidNode()).toBe(3)
+  })
 })
