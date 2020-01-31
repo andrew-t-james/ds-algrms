@@ -186,34 +186,25 @@ class LinkedList {
   }
 
   findMidNode() {
-    let current = this.getHeadNode
-    let count = 0
-    let midNode = null
+    let slow = this.getHeadNode
+    let fast = this.getHeadNode
 
     if (this.isEmpty) return 'Empty LinkedList'
 
-    while (current !== null) {
-      current = current.next
-      count++
+    if (slow.next === null) {
+      return slow.data
     }
 
-    current = this.getHeadNode
-
-    let mid = Math.round(count / 2)
-
-    let currentCount = 0
-
-    while (current !== null) {
-      currentCount++
-
-      if (currentCount === mid) {
-        midNode = current.data
-      }
-
-      current = current.next
+    while (
+      slow.next !== null &&
+      fast.next !== null &&
+      fast.next.next !== null
+    ) {
+      slow = slow.next
+      fast = fast.next.next
     }
 
-    return midNode
+    return slow.data
   }
 
   get getHeadNode() {

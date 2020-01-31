@@ -174,7 +174,7 @@ describe('LinkedList', () => {
     const list = new LinkedList()
     expect(list).toEqual({ head: null })
 
-    expect(list.findMidNodeBruteForce()).toBe('Empty LinkedList')
+    expect(list.findMidNode()).toBe('Empty LinkedList')
 
     let dataList = [1, 2, 3, 4]
 
@@ -189,7 +189,7 @@ describe('LinkedList', () => {
       }
     })
 
-    expect(list.findMidNodeBruteForce()).toBe(2)
+    expect(list.findMidNode()).toBe(2)
 
     dataList.push(5)
 
@@ -209,6 +209,6 @@ describe('LinkedList', () => {
       }
     })
 
-    expect(newList.findMidNodeBruteForce()).toBe(3)
+    expect(newList.findMidNode()).toBe(3)
   })
 })
