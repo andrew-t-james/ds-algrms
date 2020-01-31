@@ -211,4 +211,43 @@ describe('LinkedList', () => {
 
     expect(newList.findMidNode()).toBe(3)
   })
+
+  test('should remove duplicate nodes in a linked list', () => {
+    const list = new LinkedList()
+    expect(list).toEqual({ head: null })
+
+    const dataList = [1, 2, 2, 3, 3, 4, 4]
+
+    for (let data of dataList) {
+      list.insertAtTail(data)
+    }
+
+    expect(list).toEqual({
+      head: {
+        data: 1,
+        next: {
+          data: 2,
+          next: {
+            data: 2,
+            next: {
+              data: 3,
+              next: {
+                data: 3,
+                next: { data: 4, next: { data: 4, next: null } }
+              }
+            }
+          }
+        }
+      }
+    })
+
+    list.removeDuplicatesWithSet()
+
+    expect(list).toEqual({
+      head: {
+        data: 1,
+        next: { data: 2, next: { data: 3, next: { data: 4, next: null } } }
+      }
+    })
+  })
 })

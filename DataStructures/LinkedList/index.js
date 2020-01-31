@@ -207,6 +207,26 @@ class LinkedList {
     return slow.data
   }
 
+  removeDuplicatesWithSet() {
+    let current = this.getHeadNode
+    let previous
+    const uniqueVals = new Set()
+
+    if (this.isEmpty) return 'Empty LinkedList'
+
+    while (current.next !== null) {
+      uniqueVals.add(current.data)
+      previous = current
+      current = current.next
+
+      if (uniqueVals.has(current.data)) {
+        previous.next = current.next
+      }
+    }
+
+    return this
+  }
+
   get getHeadNode() {
     return this.head
   }
