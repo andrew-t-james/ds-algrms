@@ -293,11 +293,12 @@ describe('LinkedList', () => {
     const listOne = new LinkedList()
     const listTwo = new LinkedList()
 
+    expect(intersection(listOne, listTwo)).toBe('Empty List')
+
     const dataList = [1, 2, 3]
     const dataListTwo = [4, 5, 6]
 
     addData(dataList, listOne)
-    addData(dataListTwo, listTwo)
 
     expect(listOne).toEqual({
       head: {
@@ -305,6 +306,15 @@ describe('LinkedList', () => {
         next: { data: 2, next: { data: 3, next: null } }
       }
     })
+
+    expect(union(listOne, listTwo)).toEqual({
+      head: {
+        data: 1,
+        next: { data: 2, next: { data: 3, next: null } }
+      }
+    })
+
+    addData(dataListTwo, listTwo)
 
     expect(listTwo).toEqual({
       head: {

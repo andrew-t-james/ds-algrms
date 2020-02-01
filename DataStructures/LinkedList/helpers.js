@@ -4,7 +4,11 @@ function union(listOne, listTwo) {
   const result = new LinkedList()
   let current = listOne.getHeadNode
 
-  if (!listOne.getHeadNode || !listTwo.getHeadNode) return 'Empty List'
+  if (listOne.isEmpty) {
+    return listTwo
+  } else if (listTwo.isEmpty) {
+    return listOne
+  }
 
   while (current !== null) {
     result.insertAtTail(current.data)
@@ -26,7 +30,7 @@ function intersection(listOne, listTwo) {
   const set = new Set()
   let current = listOne.getHeadNode
 
-  if (!listOne.getHeadNode || !listTwo.getHeadNode) return 'Empty List'
+  if (listOne.isEmpty || listTwo.isEmpty) return 'Empty List'
 
   while (current !== null) {
     if (!set.has(current.data)) {
