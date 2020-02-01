@@ -20,10 +20,10 @@
     "prettier": "1.19.1"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --verbose",
     "test:badges": "npm run test:coverage  && jest-coverage-badges",
     "test:coverage": "npm test -- --coverage",
-    "test:watch": "jest --watch",
+    "test:watch": "jest --watch --verbose",
     "view:coverage": "open coverage/lcov-report/index.html"
   },
   "jest": {
