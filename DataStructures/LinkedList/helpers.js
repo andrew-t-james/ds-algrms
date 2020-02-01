@@ -1,19 +1,36 @@
 const LinkedList = require('.')
 
-function union(list1, list2) {
-  return list1
-}
-
-function intersection(listOne, listTwo) {
-  let result = new LinkedList()
-  const dict = new Set()
+function union(listOne, listTwo) {
+  const result = new LinkedList()
   let current = listOne.getHeadNode
 
   if (!listOne.getHeadNode || !listTwo.getHeadNode) return 'Empty List'
 
   while (current !== null) {
-    if (!dict.has(current.data)) {
-      dict.add(current.data)
+    result.insertAtTail(current.data)
+    current = current.next
+  }
+
+  current = listTwo.getHeadNode
+
+  while (current !== null) {
+    result.insertAtTail(current.data)
+    current = current.next
+  }
+
+  return result
+}
+
+function intersection(listOne, listTwo) {
+  let result = new LinkedList()
+  const set = new Set()
+  let current = listOne.getHeadNode
+
+  if (!listOne.getHeadNode || !listTwo.getHeadNode) return 'Empty List'
+
+  while (current !== null) {
+    if (!set.has(current.data)) {
+      set.add(current.data)
     }
 
     current = current.next
@@ -22,14 +39,13 @@ function intersection(listOne, listTwo) {
   current = listTwo.getHeadNode
 
   while (current !== null) {
-    if (dict.has(current.data)) {
+    if (set.has(current.data)) {
       result.insertAtHead(current.data)
     }
 
     current = current.next
   }
 
-  console.log('result:', result)
   return result
 }
 

@@ -2,6 +2,12 @@ const LinkedList = require('.')
 const { union, intersection } = require('./helpers')
 
 describe('LinkedList', () => {
+  function addData(arr, list) {
+    for (let data of arr) {
+      list.insertAtTail(data)
+    }
+  }
+
   test('should return boolean true when isEmpty', () => {
     const list = new LinkedList()
     expect(list.isEmpty).toBe(true)
@@ -259,12 +265,6 @@ describe('LinkedList', () => {
     const dataList = [1, 2, 3]
     const dataListTwo = [3, 4, 5]
 
-    function addData(arr, list) {
-      for (let data of arr) {
-        list.insertAtTail(data)
-      }
-    }
-
     addData(dataList, listOne)
     addData(dataListTwo, listTwo)
 
@@ -285,6 +285,53 @@ describe('LinkedList', () => {
       head: {
         data: 3,
         next: null
+      }
+    })
+  })
+
+  test('should return a union of two liked lists', () => {
+    const listOne = new LinkedList()
+    const listTwo = new LinkedList()
+
+    const dataList = [1, 2, 3]
+    const dataListTwo = [4, 5, 6]
+
+    addData(dataList, listOne)
+    addData(dataListTwo, listTwo)
+
+    expect(listOne).toEqual({
+      head: {
+        data: 1,
+        next: { data: 2, next: { data: 3, next: null } }
+      }
+    })
+
+    expect(listTwo).toEqual({
+      head: {
+        data: 4,
+        next: { data: 5, next: { data: 6, next: null } }
+      }
+    })
+
+    expect(union(listOne, listTwo)).toEqual({
+      head: {
+        data: 1,
+        next: {
+          data: 2,
+          next: {
+            data: 3,
+            next: {
+              data: 4,
+              next: {
+                data: 5,
+                next: {
+                  data: 6,
+                  next: null
+                }
+              }
+            }
+          }
+        }
       }
     })
   })
