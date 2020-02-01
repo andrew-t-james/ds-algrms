@@ -227,6 +227,23 @@ class LinkedList {
     return this
   }
 
+  getNthNodeFromEnd(node) {
+    let current = this.getHeadNode
+    let nodeData = null
+    let count = 0
+    if (this.isEmpty) return 'Empty List'
+
+    while (current !== null) {
+      if (count === node) {
+        nodeData = current.data
+      }
+      count++
+      current = current.next
+    }
+
+    return nodeData
+  }
+
   get getHeadNode() {
     return this.head
   }

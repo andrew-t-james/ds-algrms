@@ -345,4 +345,38 @@ describe('LinkedList', () => {
       }
     })
   })
+
+  test('should return nth node from the last node', () => {
+    const list = new LinkedList()
+    expect(list.getNthNodeFromEnd(3)).toBe('Empty List')
+
+    const dataList = [1, 2, 3, 4, 5, 6]
+
+    addData(dataList, list)
+
+    expect(list).toEqual({
+      head: {
+        data: 1,
+        next: {
+          data: 2,
+          next: {
+            data: 3,
+            next: {
+              data: 4,
+              next: {
+                data: 5,
+                next: {
+                  data: 6,
+                  next: null
+                }
+              }
+            }
+          }
+        }
+      }
+    })
+
+    expect(list.getNthNodeFromEnd(10)).toBe(null)
+    expect(list.getNthNodeFromEnd(3)).toBe(4)
+  })
 })
