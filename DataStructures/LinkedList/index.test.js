@@ -1,4 +1,5 @@
 const LinkedList = require('.')
+const { union, intersection } = require('./helpers')
 
 describe('LinkedList', () => {
   test('should return boolean true when isEmpty', () => {
@@ -247,6 +248,43 @@ describe('LinkedList', () => {
       head: {
         data: 1,
         next: { data: 2, next: { data: 3, next: { data: 4, next: null } } }
+      }
+    })
+  })
+
+  test('should return node that is an intersection in multiple liked lists', () => {
+    const listOne = new LinkedList()
+    const listTwo = new LinkedList()
+
+    const dataList = [1, 2, 3]
+    const dataListTwo = [3, 4, 5]
+
+    function addData(arr, list) {
+      for (let data of arr) {
+        list.insertAtTail(data)
+      }
+    }
+
+    addData(dataList, listOne)
+    addData(dataListTwo, listTwo)
+
+    expect(listOne).toEqual({
+      head: {
+        data: 1,
+        next: { data: 2, next: { data: 3, next: null } }
+      }
+    })
+    expect(listTwo).toEqual({
+      head: {
+        data: 3,
+        next: { data: 4, next: { data: 5, next: null } }
+      }
+    })
+
+    expect(intersection(listOne, listTwo)).toEqual({
+      head: {
+        data: 3,
+        next: null
       }
     })
   })
