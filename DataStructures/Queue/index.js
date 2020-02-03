@@ -11,7 +11,7 @@ class Queue {
     if (this.isEmpty) {
       return null
     } else {
-      this.items.shift()
+      return this.items.shift()
     }
   }
 
