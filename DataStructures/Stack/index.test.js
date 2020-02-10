@@ -6,6 +6,7 @@ describe('Stack', () => {
       stack.push(node)
     }
   }
+
   test('should return boolean when isEmpty called', () => {
     const list = new Stack()
     expect(list.isEmpty).toBe(true)
@@ -18,6 +19,15 @@ describe('Stack', () => {
     expect(list.top).toBe(null)
     list.push(2)
     expect(list.top).toBe(2)
+  })
+
+  test('should return null when stack empty', () => {
+    const list = new Stack()
+    expect(list.getTop).toBe(null)
+    list.push(2)
+    expect(list.getTop).toBe(2)
+    expect(list.pop()).toBe(2)
+    expect(list.pop()).toBe(null)
   })
 
   test('should return size of stack', () => {
