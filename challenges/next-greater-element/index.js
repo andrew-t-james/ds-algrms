@@ -27,6 +27,29 @@ function nextGreaterElementUsingStack(arr) {
   let top
   let next
 
+  for (let i = arr.length - 1; i >= 0; i--) {
+    next = arr[i]
+
+    if (!stack.isEmpty) {
+      top = stack.getTop
+
+      while (top < next) {
+        if (stack.isEmpty) break
+
+        stack.pop()
+        top = stack.getTop
+      }
+    }
+
+    if (!stack.isEmpty) {
+      results[i] = stack.getTop
+    } else {
+      results[i] = -1
+    }
+
+    stack.push(next)
+  }
+
   return results
 }
 
