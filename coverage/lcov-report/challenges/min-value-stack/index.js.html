@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for challenges/merge-sorted-arrays/index.js</title>
+    <title>Code coverage report for challenges/min-value-stack/index.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -16,28 +16,28 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../index.html">All files</a> / <a href="index.html">challenges/merge-sorted-arrays</a> index.js
+      <a href="../../index.html">All files</a> / <a href="index.html">challenges/min-value-stack</a> index.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">95.24% </span>
+        <span class="strong">81.82% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>20/21</span>
-      </div>
-      <div class='fl pad1y space-right2'>
-        <span class="strong">75% </span>
-        <span class="quiet">Branches</span>
-        <span class='fraction'>6/8</span>
+        <span class='fraction'>9/11</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
-        <span class="quiet">Functions</span>
-        <span class='fraction'>5/5</span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">94.74% </span>
+        <span class="strong">75% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">81.82% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>18/19</span>
+        <span class='fraction'>9/11</span>
       </div>
     </div>
     <p class="quiet">
@@ -95,86 +95,86 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">23x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">26x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">18x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
- * @param {number[]} nums1
- * @param {number} m
- * @param {number[]} nums2
- * @param {number} n
- * @return {void} Do not return anything, modify nums1 in-place instead.
+ * implement the minStack class which will have a min() function.
+ * Whenever min() is called, the minimum value of the stack
+ * is returned in O(1) time. The element is not popped
+ * from the stack, its value is simply returned.
  */
-function merge(nums1, m, nums2, n) {
-  // remove m elements from array and replace with nums1.length
-  nums1.splice(m, nums1.length)
-  nums1.push(...nums2.splice(0, n))
-  nums1.sort((a, b) =&gt; a - b)
-}
+const Stack = require('../../DataStructures/Stack')
 &nbsp;
-function mergeSortedLists(arr1, arr2) {
-  return [...arr1, ...arr2].sort((a, b) =&gt; a - b)
-}
+class MinStack {
+  constructor() {
+    // We will use two stacks
+    // 1.mainStack: to hold original values
+    // 2.minStack to hold minimum values.
+    // Top of minStack will always be the minimum value from mainStack
+    this.mainStack = new Stack()
+    this.minStack = new Stack()
+  }
 &nbsp;
-function mergeSortedListsAnotherWay(arr1, arr2) {
-  let merged = []
-  let i = 0
-  let j = 0
+<span class="fstat-no" title="function not covered" >  po</span>p() {
+    //1. Pop element from minStack to make it sync with mainStack,
+    //2. Pop element from mainStack and return that value
+<span class="cstat-no" title="statement not covered" >    this.minStack.pop()</span>
+<span class="cstat-no" title="statement not covered" >    return this.mainStack.pop()</span>
+  }
 &nbsp;
-  while (i &lt; arr1.length &amp;&amp; j &lt; arr2.length) {
-    if (arr1[i] &lt;= arr2[j]) {
-      merged.push(arr1[i])
-      i++
+  push(value) {
+    // 1. Push value in mainStack and check that value with the top value of minStack
+    this.mainStack.push(value)
+&nbsp;
+    // 2. If the pushed value is greater than the value of top, then push top in minStack
+    if (value &gt; this.minStack.getTop &amp;&amp; this.minStack.isEmpty === false) {
+      this.minStack.push(this.minStack.getTop)
     } else {
-      merged.push(arr2[j])
-      j++
+      this.minStack.push(value)
     }
   }
-&nbsp;
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (i &lt;= arr1.length - 1) {
-<span class="cstat-no" title="statement not covered" >    merged = merged.concat(arr1.slice(i))</span>
-  } else <span class="missing-if-branch" title="else path not taken" >E</span>if (j &lt;= arr2.length - 1) {
-    merged = merged.concat(arr2.slice(i))
+  // Returns the minimum value from newStack in O(1) Time
+  min() {
+    return this.minStack.getTop
   }
-&nbsp;
-  return merged
 }
 &nbsp;
-module.exports = { merge, mergeSortedLists, mergeSortedListsAnotherWay }
+module.exports = MinStack
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
