@@ -1,4 +1,5 @@
 const LinkedList = require('../LinkedList')
+const Queue = require('../Queue')
 
 class Graph {
   constructor(vertices) {
@@ -17,6 +18,34 @@ class Graph {
 
   addEdge(source, destination) {
     this.list[source].insertAtHead(destination)
+  }
+
+  bfsSearch(source) {
+    let result = ''
+    let visited = []
+    let queue = new Queue()
+    let i = 0
+
+    while (i < this.vertices) {
+      visited.push(false)
+      i++
+    }
+
+    queue.enqueue(source)
+    visited[source] = true
+
+    while (queue.isEmpty === false) {
+      let currentNode = queue.dequeue()
+      console.log('currentNode:', currentNode)
+
+      while () {
+        if () {
+      // Visit the children
+        }
+      }
+    }
+
+    return result
   }
 }
 
