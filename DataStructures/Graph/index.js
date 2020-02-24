@@ -34,14 +34,20 @@ class Graph {
     queue.enqueue(source)
     visited[source] = true
 
-    while (queue.isEmpty === false) {
+    // Traverse while queue is not empty
+    while (queue.isEmpty == false) {
+      // Dequeue a vertex/node from queue and add it to result
       let currentNode = queue.dequeue()
-      console.log('currentNode:', currentNode)
-
-      while () {
-        if () {
-      // Visit the children
+      result += currentNode
+      // Get adjacent vertices to the current_node from the list,
+      // and if they are not already visited then enqueue them in the Queue
+      let temp = this.list[currentNode].getHeadNode
+      while (temp !== null) {
+        if (visited[temp.data] === false) {
+          queue.enqueue(temp.data)
+          visited[temp.data] = true
         }
+        temp = temp.next
       }
     }
 

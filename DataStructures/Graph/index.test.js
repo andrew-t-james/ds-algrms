@@ -43,6 +43,41 @@ describe('Graph', () => {
     graph.addEdge(0, 2)
     graph.addEdge(1, 3)
     graph.addEdge(1, 4)
+
     expect(graph.bfsSearch(0)).toBe('02143')
   })
 })
+
+/**
+ list: [
+  {
+    head: {
+      data: 2,
+      next: {
+        data: 1,
+        next: null
+      }
+    }
+  },
+  {
+    head: {
+      data: 4,
+      next: {
+        data: 3,
+        next: null
+      }
+    }
+  },
+  {
+    "head": {
+      data: 8,
+      next: {
+        null
+      }
+    }
+  },
+  {
+    head: null
+  }
+]
+*/
