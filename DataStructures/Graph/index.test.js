@@ -44,7 +44,18 @@ describe('Graph', () => {
     graph.addEdge(1, 3)
     graph.addEdge(1, 4)
 
-    expect(graph.bfsSearch(0)).toBe('02143')
+    expect(graph.BFSearch(0)).toBe('02143')
+  })
+
+  test('should search using DFS traversal technique', () => {
+    const graph = new Graph(5)
+    graph.addEdge(0, 1)
+    graph.addEdge(0, 2)
+    graph.addEdge(1, 3)
+    graph.addEdge(1, 4)
+
+    expect(graph.DFSearch(0)).toBe('01342')
+  })
   })
 })
 

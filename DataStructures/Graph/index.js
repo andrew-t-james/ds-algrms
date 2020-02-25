@@ -20,7 +20,7 @@ class Graph {
     this.list[source].insertAtHead(destination)
   }
 
-  bfsSearch(source) {
+  BFSearch(source) {
     let result = ''
     let visited = []
     let queue = new Queue()
@@ -51,6 +51,35 @@ class Graph {
       }
     }
 
+    return result
+  }
+
+  DFSearch(source) {
+    let result = ''
+    let visited = []
+    let stack = new Stack()
+    let i = 0
+
+    while (i < this.vertices) {
+      visited.push(false)
+      i++
+    }
+
+    stack.push(source)
+    visited[source] = true
+
+    while (stack.isEmpty === false) {
+      let current = stack.pop()
+      result += current
+      let temp = this.list[current].head
+      while (temp !== null) {
+        if (visited[temp.data] === false) {
+          stack.push(temp.data)
+        }
+        temp = temp.next
+      }
+      visited[current] = true
+    }
     return result
   }
 }
