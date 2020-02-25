@@ -1,5 +1,6 @@
 const LinkedList = require('../LinkedList')
 const Queue = require('../Queue')
+const Stack = require('../Stack')
 
 class Graph {
   constructor(vertices) {
@@ -81,6 +82,35 @@ class Graph {
       visited[current] = true
     }
     return result
+  }
+
+  detectCycle(source) {
+    let visited = []
+    let stack = new Stack()
+    let i = 0
+
+    while (i < this.vertices) {
+      visited.push(false)
+      i++
+    }
+
+    stack.push(source)
+    visited[source] = true
+
+    while (stack.isEmpty === false) {
+      let current = stack.pop()
+      let temp = this.list[current].head
+      while (temp !== null) {
+        if (visited[temp.data] === false) {
+          stack.push(temp.data)
+        } else {
+          return true
+        }
+        temp = temp.next
+      }
+      visited[current] = true
+    }
+    return false
   }
 }
 

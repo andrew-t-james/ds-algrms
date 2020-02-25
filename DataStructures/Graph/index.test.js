@@ -56,6 +56,19 @@ describe('Graph', () => {
 
     expect(graph.DFSearch(0)).toBe('01342')
   })
+
+  test('should detect cycle in Graph', () => {
+    const graph = new Graph(5)
+    graph.addEdge(0, 1)
+    graph.addEdge(0, 2)
+    graph.addEdge(1, 3)
+    graph.addEdge(1, 4)
+
+    expect(graph.detectCycle(0)).toBe(false)
+
+    graph.addEdge(1, 0)
+
+    expect(graph.detectCycle(0)).toBe(true)
   })
 })
 
