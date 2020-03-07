@@ -112,6 +112,14 @@ class Graph {
     }
     return false
   }
+
+  findMotherVertex(source) {
+    const dfs = this.DFSearch(source)
+    if (this.vertices === dfs.length) {
+      return dfs.length
+    }
+    return -1
+  }
 }
 
 module.exports = Graph
