@@ -79,7 +79,7 @@ describe('Graph', () => {
     expect(graph.DFSearch(0)).toBe('01342')
   })
 
-  test.only('should find mother vertex in Graph', () => {
+  test('should find mother vertex in Graph', () => {
     const graph = new Graph(5)
     expect(graph.findMotherVertex(0)).toBe(-1)
 
