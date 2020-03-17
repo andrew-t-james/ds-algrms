@@ -1,0 +1,316 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinkedList should delete node by value 1`] = `
+LinkedList {
+  "head": Node {
+    "data": 1,
+    "next": Node {
+      "data": 2,
+      "next": Node {
+        "data": 3,
+        "next": null,
+      },
+    },
+  },
+}
+`;
+
+exports[`LinkedList should delete node by value 2`] = `
+LinkedList {
+  "head": Node {
+    "data": 2,
+    "next": Node {
+      "data": 3,
+      "next": null,
+    },
+  },
+}
+`;
+
+exports[`LinkedList should delete node by value 3`] = `
+LinkedList {
+  "head": Node {
+    "data": 1,
+    "next": Node {
+      "data": 2,
+      "next": Node {
+        "data": 3,
+        "next": null,
+      },
+    },
+  },
+}
+`;
+
+exports[`LinkedList should delete node by value 4`] = `
+LinkedList {
+  "head": Node {
+    "data": 1,
+    "next": Node {
+      "data": 3,
+      "next": null,
+    },
+  },
+}
+`;
+
+exports[`LinkedList should detect a circular reference in a linked list 1`] = `
+LinkedList {
+  "head": Node {
+    "data": 1,
+    "next": Node {
+      "data": 2,
+      "next": Node {
+        "data": 3,
+        "next": null,
+      },
+    },
+  },
+}
+`;
+
+exports[`LinkedList should remove duplicate nodes in a linked list 1`] = `
+LinkedList {
+  "head": Node {
+    "data": 1,
+    "next": Node {
+      "data": 2,
+      "next": Node {
+        "data": 2,
+        "next": Node {
+          "data": 3,
+          "next": Node {
+            "data": 3,
+            "next": Node {
+              "data": 4,
+              "next": Node {
+                "data": 4,
+                "next": null,
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`LinkedList should remove duplicate nodes in a linked list 2`] = `
+LinkedList {
+  "head": Node {
+    "data": 1,
+    "next": Node {
+      "data": 2,
+      "next": Node {
+        "data": 3,
+        "next": Node {
+          "data": 4,
+          "next": null,
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`LinkedList should return a union of two liked lists 1`] = `
+LinkedList {
+  "head": Node {
+    "data": 1,
+    "next": Node {
+      "data": 2,
+      "next": Node {
+        "data": 3,
+        "next": null,
+      },
+    },
+  },
+}
+`;
+
+exports[`LinkedList should return a union of two liked lists 2`] = `
+LinkedList {
+  "head": Node {
+    "data": 1,
+    "next": Node {
+      "data": 2,
+      "next": Node {
+        "data": 3,
+        "next": null,
+      },
+    },
+  },
+}
+`;
+
+exports[`LinkedList should return a union of two liked lists 3`] = `
+LinkedList {
+  "head": Node {
+    "data": 4,
+    "next": Node {
+      "data": 5,
+      "next": Node {
+        "data": 6,
+        "next": null,
+      },
+    },
+  },
+}
+`;
+
+exports[`LinkedList should return a union of two liked lists 4`] = `
+LinkedList {
+  "head": Node {
+    "data": 1,
+    "next": Node {
+      "data": 2,
+      "next": Node {
+        "data": 3,
+        "next": Node {
+          "data": 4,
+          "next": Node {
+            "data": 5,
+            "next": Node {
+              "data": 6,
+              "next": null,
+            },
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`LinkedList should return mid node 1`] = `
+LinkedList {
+  "head": Node {
+    "data": 1,
+    "next": Node {
+      "data": 2,
+      "next": Node {
+        "data": 3,
+        "next": Node {
+          "data": 4,
+          "next": null,
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`LinkedList should return mid node 2`] = `
+LinkedList {
+  "head": Node {
+    "data": 1,
+    "next": Node {
+      "data": 2,
+      "next": Node {
+        "data": 3,
+        "next": Node {
+          "data": 4,
+          "next": Node {
+            "data": 5,
+            "next": null,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`LinkedList should return node that is an intersection in multiple liked lists 1`] = `
+LinkedList {
+  "head": Node {
+    "data": 1,
+    "next": Node {
+      "data": 2,
+      "next": Node {
+        "data": 3,
+        "next": null,
+      },
+    },
+  },
+}
+`;
+
+exports[`LinkedList should return node that is an intersection in multiple liked lists 2`] = `
+LinkedList {
+  "head": Node {
+    "data": 3,
+    "next": Node {
+      "data": 4,
+      "next": Node {
+        "data": 5,
+        "next": null,
+      },
+    },
+  },
+}
+`;
+
+exports[`LinkedList should return node that is an intersection in multiple liked lists 3`] = `
+LinkedList {
+  "head": Node {
+    "data": 3,
+    "next": null,
+  },
+}
+`;
+
+exports[`LinkedList should return nth node from the last node 1`] = `
+LinkedList {
+  "head": Node {
+    "data": 1,
+    "next": Node {
+      "data": 2,
+      "next": Node {
+        "data": 3,
+        "next": Node {
+          "data": 4,
+          "next": Node {
+            "data": 5,
+            "next": Node {
+              "data": 6,
+              "next": null,
+            },
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`LinkedList should reverse linked list 1`] = `
+LinkedList {
+  "head": Node {
+    "data": 1,
+    "next": Node {
+      "data": 2,
+      "next": Node {
+        "data": 3,
+        "next": null,
+      },
+    },
+  },
+}
+`;
+
+exports[`LinkedList should reverse linked list 2`] = `
+LinkedList {
+  "head": Node {
+    "data": 3,
+    "next": Node {
+      "data": 2,
+      "next": Node {
+        "data": 1,
+        "next": null,
+      },
+    },
+  },
+}
+`;

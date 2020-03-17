@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BinarySearchTree should insert new Node iteratively 1`] = `
+BinarySearchTree {
+  "root": Node {
+    "leftChild": Node {
+      "leftChild": Node {
+        "leftChild": null,
+        "rightChild": null,
+        "val": 2,
+      },
+      "rightChild": Node {
+        "leftChild": null,
+        "rightChild": null,
+        "val": 5,
+      },
+      "val": 4,
+    },
+    "rightChild": Node {
+      "leftChild": Node {
+        "leftChild": null,
+        "rightChild": null,
+        "val": 8,
+      },
+      "rightChild": Node {
+        "leftChild": Node {
+          "leftChild": null,
+          "rightChild": null,
+          "val": 10,
+        },
+        "rightChild": Node {
+          "leftChild": null,
+          "rightChild": null,
+          "val": 14,
+        },
+        "val": 12,
+      },
+      "val": 9,
+    },
+    "val": 6,
+  },
+}
+`;
+
+exports[`BinarySearchTree should insert new Node recursively 1`] = `
+BinarySearchTree {
+  "root": Node {
+    "leftChild": Node {
+      "leftChild": Node {
+        "leftChild": null,
+        "rightChild": null,
+        "val": 2,
+      },
+      "rightChild": Node {
+        "leftChild": null,
+        "rightChild": null,
+        "val": 5,
+      },
+      "val": 4,
+    },
+    "rightChild": Node {
+      "leftChild": Node {
+        "leftChild": null,
+        "rightChild": null,
+        "val": 8,
+      },
+      "rightChild": Node {
+        "leftChild": Node {
+          "leftChild": null,
+          "rightChild": null,
+          "val": 10,
+        },
+        "rightChild": Node {
+          "leftChild": null,
+          "rightChild": null,
+          "val": 14,
+        },
+        "val": 12,
+      },
+      "val": 9,
+    },
+    "val": 6,
+  },
+}
+`;

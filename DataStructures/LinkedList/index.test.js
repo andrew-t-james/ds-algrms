@@ -118,26 +118,18 @@ describe('LinkedList', () => {
     list.insertAtTail(2)
     list.insertAtTail(3)
 
-    expect(list).toEqual({
-      head: { data: 1, next: { data: 2, next: { data: 3, next: null } } }
-    })
+    expect(list).toMatchSnapshot()
 
     expect(list.deleteByValue(1)).toBe(true)
 
-    expect(list).toEqual({
-      head: { data: 2, next: { data: 3, next: null } }
-    })
+    expect(list).toMatchSnapshot()
 
     list.insertAtHead(1)
 
-    expect(list).toEqual({
-      head: { data: 1, next: { data: 2, next: { data: 3, next: null } } }
-    })
+    expect(list).toMatchSnapshot()
 
     expect(list.deleteByValue(2)).toBe(true)
-    expect(list).toEqual({
-      head: { data: 1, next: { data: 3, next: null } }
-    })
+    expect(list).toMatchSnapshot()
   })
 
   test('should reverse linked list', () => {
@@ -148,14 +140,10 @@ describe('LinkedList', () => {
     list.insertAtTail(2)
     list.insertAtTail(3)
 
-    expect(list).toEqual({
-      head: { data: 1, next: { data: 2, next: { data: 3, next: null } } }
-    })
+    expect(list).toMatchSnapshot()
 
     list.reverse()
-    expect(list).toEqual({
-      head: { data: 3, next: { data: 2, next: { data: 1, next: null } } }
-    })
+    expect(list).toMatchSnapshot()
   })
 
   test('should detect a circular reference in a linked list', () => {
@@ -166,9 +154,7 @@ describe('LinkedList', () => {
     list.insertAtTail(2)
     list.insertAtTail(3)
 
-    expect(list).toEqual({
-      head: { data: 1, next: { data: 2, next: { data: 3, next: null } } }
-    })
+    expect(list).toMatchSnapshot()
 
     expect(list.detectLoop()).toBe(false)
     list.head.next.next.next = list.head.next
@@ -189,12 +175,7 @@ describe('LinkedList', () => {
       list.insertAtTail(data)
     }
 
-    expect(list).toEqual({
-      head: {
-        data: 1,
-        next: { data: 2, next: { data: 3, next: { data: 4, next: null } } }
-      }
-    })
+    expect(list).toMatchSnapshot()
 
     expect(list.findMidNode()).toBe(2)
 
@@ -206,15 +187,7 @@ describe('LinkedList', () => {
       newList.insertAtTail(data)
     }
 
-    expect(newList).toEqual({
-      head: {
-        data: 1,
-        next: {
-          data: 2,
-          next: { data: 3, next: { data: 4, next: { data: 5, next: null } } }
-        }
-      }
-    })
+    expect(newList).toMatchSnapshot()
 
     expect(newList.findMidNode()).toBe(3)
   })
@@ -229,33 +202,11 @@ describe('LinkedList', () => {
       list.insertAtTail(data)
     }
 
-    expect(list).toEqual({
-      head: {
-        data: 1,
-        next: {
-          data: 2,
-          next: {
-            data: 2,
-            next: {
-              data: 3,
-              next: {
-                data: 3,
-                next: { data: 4, next: { data: 4, next: null } }
-              }
-            }
-          }
-        }
-      }
-    })
+    expect(list).toMatchSnapshot()
 
     list.removeDuplicatesWithSet()
 
-    expect(list).toEqual({
-      head: {
-        data: 1,
-        next: { data: 2, next: { data: 3, next: { data: 4, next: null } } }
-      }
-    })
+    expect(list).toMatchSnapshot()
   })
 
   test('should return node that is an intersection in multiple liked lists', () => {
@@ -268,25 +219,10 @@ describe('LinkedList', () => {
     addData(dataList, listOne)
     addData(dataListTwo, listTwo)
 
-    expect(listOne).toEqual({
-      head: {
-        data: 1,
-        next: { data: 2, next: { data: 3, next: null } }
-      }
-    })
-    expect(listTwo).toEqual({
-      head: {
-        data: 3,
-        next: { data: 4, next: { data: 5, next: null } }
-      }
-    })
+    expect(listOne).toMatchSnapshot()
+    expect(listTwo).toMatchSnapshot()
 
-    expect(intersection(listOne, listTwo)).toEqual({
-      head: {
-        data: 3,
-        next: null
-      }
-    })
+    expect(intersection(listOne, listTwo)).toMatchSnapshot()
   })
 
   test('should return a union of two liked lists', () => {
@@ -300,50 +236,15 @@ describe('LinkedList', () => {
 
     addData(dataList, listOne)
 
-    expect(listOne).toEqual({
-      head: {
-        data: 1,
-        next: { data: 2, next: { data: 3, next: null } }
-      }
-    })
+    expect(listOne).toMatchSnapshot()
 
-    expect(union(listOne, listTwo)).toEqual({
-      head: {
-        data: 1,
-        next: { data: 2, next: { data: 3, next: null } }
-      }
-    })
+    expect(union(listOne, listTwo)).toMatchSnapshot()
 
     addData(dataListTwo, listTwo)
 
-    expect(listTwo).toEqual({
-      head: {
-        data: 4,
-        next: { data: 5, next: { data: 6, next: null } }
-      }
-    })
+    expect(listTwo).toMatchSnapshot()
 
-    expect(union(listOne, listTwo)).toEqual({
-      head: {
-        data: 1,
-        next: {
-          data: 2,
-          next: {
-            data: 3,
-            next: {
-              data: 4,
-              next: {
-                data: 5,
-                next: {
-                  data: 6,
-                  next: null
-                }
-              }
-            }
-          }
-        }
-      }
-    })
+    expect(union(listOne, listTwo)).toMatchSnapshot()
   })
 
   test('should return nth node from the last node', () => {
@@ -354,27 +255,7 @@ describe('LinkedList', () => {
 
     addData(dataList, list)
 
-    expect(list).toEqual({
-      head: {
-        data: 1,
-        next: {
-          data: 2,
-          next: {
-            data: 3,
-            next: {
-              data: 4,
-              next: {
-                data: 5,
-                next: {
-                  data: 6,
-                  next: null
-                }
-              }
-            }
-          }
-        }
-      }
-    })
+    expect(list).toMatchSnapshot()
 
     expect(list.getNthNodeFromEnd(10)).toBe(null)
     expect(list.getNthNodeFromEnd(3)).toBe(4)
