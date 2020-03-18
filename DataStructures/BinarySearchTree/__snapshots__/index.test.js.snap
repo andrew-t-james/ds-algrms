@@ -2,6 +2,7 @@
 
 exports[`BinarySearchTree should insert new Node iteratively 1`] = `
 BinarySearchTree {
+  "printResult": Array [],
   "root": Node {
     "leftChild": Node {
       "leftChild": Node {
@@ -44,6 +45,7 @@ BinarySearchTree {
 
 exports[`BinarySearchTree should insert new Node recursively 1`] = `
 BinarySearchTree {
+  "printResult": Array [],
   "root": Node {
     "leftChild": Node {
       "leftChild": Node {

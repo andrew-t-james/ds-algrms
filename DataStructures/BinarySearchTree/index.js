@@ -9,6 +9,7 @@ class Node {
 class BinarySearchTree {
   constructor(value) {
     this.root = new Node(value)
+    this.printResult = []
   }
 
   insert(value) {
@@ -45,6 +46,61 @@ class BinarySearchTree {
 
   rInsert(newValue) {
     this.insertRecursive(this.root, newValue)
+  }
+
+  preOrderPrint(currentNode) {
+    if (currentNode !== null) {
+      this.printResult.push(currentNode.val)
+      this.preOrderPrint(currentNode.leftChild)
+      this.preOrderPrint(currentNode.rightChild)
+    }
+  }
+
+  inOrderPrint(currentNode) {
+    if (currentNode !== null) {
+      this.inOrderPrint(currentNode.leftChild)
+      this.printResult.push(currentNode.val)
+      this.inOrderPrint(currentNode.rightChild)
+    }
+  }
+
+  postOrderPrint(currentNode) {
+    if (currentNode !== null) {
+      this.postOrderPrint(currentNode.leftChild)
+      this.postOrderPrint(currentNode.rightChild)
+      this.printResult.push(currentNode.val)
+    }
+  }
+
+  search(value) {
+    let currentNode = this.root
+    while (currentNode && currentNode.val !== value) {
+      if (value < currentNode.val) {
+        currentNode = currentNode.leftChild
+      } else {
+        currentNode = currentNode.rightChild
+      }
+    }
+    return currentNode
+  }
+
+  recursiveSearch(currentNode, value) {
+    if (currentNode !== null) {
+      if (currentNode.val === value) {
+        return currentNode
+      } else if (value < currentNode.val) {
+        this.recursiveSearch(currentNode.leftChild, value)
+      } else {
+        this.recursiveSearch(currentNode.rightChild, value)
+      }
+    } else {
+      return null
+    }
+    return currentNode
+  }
+
+  rSearch(currentNode, value) {
+    return this.recursiveSearch(currentNode, value)
   }
 }
 
