@@ -1,5 +1,138 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`BinarySearchTree should delete node from tree 1`] = `
+BinarySearchTree {
+  "printResult": Array [],
+  "root": Node {
+    "leftChild": Node {
+      "leftChild": Node {
+        "leftChild": null,
+        "rightChild": null,
+        "val": 2,
+      },
+      "rightChild": null,
+      "val": 4,
+    },
+    "rightChild": Node {
+      "leftChild": Node {
+        "leftChild": null,
+        "rightChild": null,
+        "val": 8,
+      },
+      "rightChild": Node {
+        "leftChild": null,
+        "rightChild": null,
+        "val": 12,
+      },
+      "val": 9,
+    },
+    "val": 6,
+  },
+}
+`;
+
+exports[`BinarySearchTree should delete node from tree 2`] = `
+BinarySearchTree {
+  "printResult": Array [],
+  "root": Node {
+    "leftChild": Node {
+      "leftChild": null,
+      "rightChild": null,
+      "val": 4,
+    },
+    "rightChild": Node {
+      "leftChild": Node {
+        "leftChild": null,
+        "rightChild": null,
+        "val": 8,
+      },
+      "rightChild": Node {
+        "leftChild": null,
+        "rightChild": null,
+        "val": 12,
+      },
+      "val": 9,
+    },
+    "val": 6,
+  },
+}
+`;
+
+exports[`BinarySearchTree should delete node from tree 3`] = `
+BinarySearchTree {
+  "printResult": Array [],
+  "root": Node {
+    "leftChild": Node {
+      "leftChild": null,
+      "rightChild": null,
+      "val": 4,
+    },
+    "rightChild": Node {
+      "leftChild": Node {
+        "leftChild": null,
+        "rightChild": null,
+        "val": 8,
+      },
+      "rightChild": null,
+      "val": 9,
+    },
+    "val": 6,
+  },
+}
+`;
+
+exports[`BinarySearchTree should delete node from tree 4`] = `
+BinarySearchTree {
+  "printResult": Array [],
+  "root": Node {
+    "leftChild": Node {
+      "leftChild": null,
+      "rightChild": null,
+      "val": 4,
+    },
+    "rightChild": Node {
+      "leftChild": null,
+      "rightChild": null,
+      "val": 9,
+    },
+    "val": 6,
+  },
+}
+`;
+
+exports[`BinarySearchTree should delete node from tree 5`] = `
+BinarySearchTree {
+  "printResult": Array [],
+  "root": Node {
+    "leftChild": Node {
+      "leftChild": null,
+      "rightChild": null,
+      "val": 4,
+    },
+    "rightChild": null,
+    "val": 6,
+  },
+}
+`;
+
+exports[`BinarySearchTree should delete node from tree 6`] = `
+BinarySearchTree {
+  "printResult": Array [],
+  "root": Node {
+    "leftChild": null,
+    "rightChild": null,
+    "val": 6,
+  },
+}
+`;
+
+exports[`BinarySearchTree should delete node from tree 7`] = `
+BinarySearchTree {
+  "printResult": Array [],
+  "root": null,
+}
+`;
+
 exports[`BinarySearchTree should insert new Node iteratively 1`] = `
 BinarySearchTree {
   "printResult": Array [],
