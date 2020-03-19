@@ -102,6 +102,31 @@ class BinarySearchTree {
   rSearch(currentNode, value) {
     return this.recursiveSearch(currentNode, value)
   }
+
+  deleteNode(currentNode, value) {
+    let parentNode
+
+    while (currentNode && currentNode.val !== value) {
+      parentNode = currentNode
+      if (value < currentNode.val) {
+        currentNode = currentNode.leftChild
+      } else {
+        currentNode = currentNode.rightChild
+      }
+    }
+
+    if (currentNode.leftChild === null && currentNode.rightChild === null) {
+      if (currentNode.val === this.root.val) {
+        this.root = null
+      } else if (currentNode.val < parentNode.val) {
+        parentNode.leftChild = null
+      } else {
+        parentNode.rightChild = null
+      }
+    }
+
+    return this
+  }
 }
 
 module.exports = BinarySearchTree
