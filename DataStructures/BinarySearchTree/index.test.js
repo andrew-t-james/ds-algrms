@@ -100,4 +100,24 @@ describe('BinarySearchTree', () => {
 
     expect(BST.rSearch(5)).toEqual(5)
   })
+
+  test('should delete node from tree', () => {
+    const BST = new BinarySearchTree(6)
+
+    expect(BST.root.val).toBe(6)
+
+    const nodes = [4, 9, 5, 2, 8, 12]
+
+    for (let node of nodes) {
+      BST.insert(node)
+    }
+
+    expect(BST.deleteNode(BST.root, 5)).toMatchSnapshot()
+    expect(BST.deleteNode(BST.root, 2)).toMatchSnapshot()
+    expect(BST.deleteNode(BST.root, 12)).toMatchSnapshot()
+    expect(BST.deleteNode(BST.root, 8)).toMatchSnapshot()
+    expect(BST.deleteNode(BST.root, 9)).toMatchSnapshot()
+    expect(BST.deleteNode(BST.root, 4)).toMatchSnapshot()
+    expect(BST.deleteNode(BST.root, 6)).toMatchSnapshot()
+  })
 })
