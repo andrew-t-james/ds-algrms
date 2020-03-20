@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BinarySearchTree should delete node from tree 1`] = `
+exports[`BinarySearchTree should delete node leaf node from tree 1`] = `
 BinarySearchTree {
   "printResult": Array [],
   "root": Node {
@@ -31,7 +31,7 @@ BinarySearchTree {
 }
 `;
 
-exports[`BinarySearchTree should delete node from tree 2`] = `
+exports[`BinarySearchTree should delete node leaf node from tree 2`] = `
 BinarySearchTree {
   "printResult": Array [],
   "root": Node {
@@ -58,7 +58,7 @@ BinarySearchTree {
 }
 `;
 
-exports[`BinarySearchTree should delete node from tree 3`] = `
+exports[`BinarySearchTree should delete node leaf node from tree 3`] = `
 BinarySearchTree {
   "printResult": Array [],
   "root": Node {
@@ -81,7 +81,7 @@ BinarySearchTree {
 }
 `;
 
-exports[`BinarySearchTree should delete node from tree 4`] = `
+exports[`BinarySearchTree should delete node leaf node from tree 4`] = `
 BinarySearchTree {
   "printResult": Array [],
   "root": Node {
@@ -100,7 +100,7 @@ BinarySearchTree {
 }
 `;
 
-exports[`BinarySearchTree should delete node from tree 5`] = `
+exports[`BinarySearchTree should delete node leaf node from tree 5`] = `
 BinarySearchTree {
   "printResult": Array [],
   "root": Node {
@@ -115,7 +115,7 @@ BinarySearchTree {
 }
 `;
 
-exports[`BinarySearchTree should delete node from tree 6`] = `
+exports[`BinarySearchTree should delete node leaf node from tree 6`] = `
 BinarySearchTree {
   "printResult": Array [],
   "root": Node {
@@ -126,10 +126,44 @@ BinarySearchTree {
 }
 `;
 
-exports[`BinarySearchTree should delete node from tree 7`] = `
+exports[`BinarySearchTree should delete node leaf node from tree 7`] = `
 BinarySearchTree {
   "printResult": Array [],
   "root": null,
+}
+`;
+
+exports[`BinarySearchTree should delete node when left node has one child from tree 1`] = `
+BinarySearchTree {
+  "printResult": Array [],
+  "root": Node {
+    "leftChild": Node {
+      "leftChild": Node {
+        "leftChild": null,
+        "rightChild": null,
+        "val": 3,
+      },
+      "rightChild": null,
+      "val": 5,
+    },
+    "rightChild": null,
+    "val": 6,
+  },
+}
+`;
+
+exports[`BinarySearchTree should delete node when left node has one child from tree 2`] = `
+BinarySearchTree {
+  "printResult": Array [],
+  "root": Node {
+    "leftChild": Node {
+      "leftChild": null,
+      "rightChild": null,
+      "val": 3,
+    },
+    "rightChild": null,
+    "val": 6,
+  },
 }
 `;
 

@@ -115,13 +115,26 @@ class BinarySearchTree {
       }
     }
 
-    if (currentNode.leftChild === null && currentNode.rightChild === null) {
+    if (currentNode === null) {
+      this.root = null
+    } else if (
+      currentNode.leftChild === null &&
+      currentNode.rightChild === null
+    ) {
       if (currentNode.val === this.root.val) {
         this.root = null
       } else if (currentNode.val < parentNode.val) {
         parentNode.leftChild = null
       } else {
         parentNode.rightChild = null
+      }
+    } else if (currentNode.rightChild === null) {
+      if (currentNode.val === this.root.val) {
+        this.root = null
+      } else if (currentNode.leftChild.val < parentNode.val) {
+        parentNode.leftChild = currentNode.leftChild
+      } else {
+        parentNode.rightChild = currentNode.leftChild
       }
     }
 

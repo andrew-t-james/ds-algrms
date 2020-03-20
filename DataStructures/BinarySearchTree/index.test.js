@@ -101,7 +101,7 @@ describe('BinarySearchTree', () => {
     expect(BST.rSearch(5)).toEqual(5)
   })
 
-  test('should delete node from tree', () => {
+  test('should delete node leaf node from tree', () => {
     const BST = new BinarySearchTree(6)
 
     expect(BST.root.val).toBe(6)
@@ -119,5 +119,20 @@ describe('BinarySearchTree', () => {
     expect(BST.deleteNode(BST.root, 9)).toMatchSnapshot()
     expect(BST.deleteNode(BST.root, 4)).toMatchSnapshot()
     expect(BST.deleteNode(BST.root, 6)).toMatchSnapshot()
+  })
+
+  test.only('should delete node when left node has one child from tree', () => {
+    const BST = new BinarySearchTree(6)
+
+    expect(BST.root.val).toBe(6)
+
+    const nodes = [5, 4, 3]
+
+    for (let node of nodes) {
+      BST.insert(node)
+    }
+
+    expect(BST.deleteNode(BST.root, 4)).toMatchSnapshot()
+    expect(BST.deleteNode(BST.root, 5)).toMatchSnapshot()
   })
 })
