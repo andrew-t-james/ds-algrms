@@ -26,13 +26,25 @@ class BinaryTree {
   }
 }
 
-const tree = new BinaryTree(1)
-tree.insert([2, 3, 4, 5, 6, 7, 8, 9, 10])
+function calculateBranchSums(node, runningSums, sums) {
+  if (!node) return // base case
+  const newRunningSum = runningSums + node.value
 
-function branchSums(root) {
-  console.log(JSON.stringify(root, null, 2))
+  if (!node.right && !node.left) {
+    sums.push(newRunningSum)
+    return
+  }
+
+  calculateBranchSums(node.left, newRunningSum, sums)
+  calculateBranchSums(node.right, newRunningSum, sums)
 }
 
-console.log(branchSums(tree))
+function branchSums(root) {
+  if (!root.value) return 'Empty tree'
 
-module.exports = branchSums
+  const sums = []
+  calculateBranchSums(root, 0, sums)
+  return sums
+}
+
+module.exports = { branchSums, BinaryTree }
