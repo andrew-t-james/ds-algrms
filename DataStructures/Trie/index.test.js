@@ -124,11 +124,10 @@ describe('Trie', () => {
       const actual = trie.wordCount
       // expectation
 
-      expect(actual).toMatchSnapshot(expected)
+      expect(actual).toEqual(expected)
     })
 
     it('should return a number of wordCount when multiple wordCount are in trie', () => {
-      // setup
       const word1 = 'car'
       const word2 = 'dog'
 
@@ -155,7 +154,6 @@ describe('Trie', () => {
       }
 
       const searchOne = trie.suggest(prefix)
-      console.log('\x1b[33m', JSON.stringify(trie, null, 2))
 
       expect(searchOne).toEqual(['cat', 'car'])
       const searchTwo = trie.suggest('trash')
@@ -197,8 +195,6 @@ describe('Trie', () => {
       const wordList = ['cat', 'mat', 'bat', 'car', 'const']
 
       trie.populate(wordList)
-
-      console.log('\x1b[33m', JSON.stringify(trie, null, 2))
 
       expect(trie.count()).toEqual(5)
     })

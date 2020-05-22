@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Trie Count should return a number of wordCount in trie 1`] = `1`;
-
 exports[`Trie Delete should delete a whole word from the trie 1`] = `
 Trie {
   "root": Node {

@@ -1,5 +1,5 @@
 TN:
-SF:/Users/andrew/workspace/ds-algrms/DataStructures/BST/index.js
+SF:DataStructures/BST/index.js
 FN:2,(anonymous_0)
 FN:8,(anonymous_1)
 FNF:2
@@ -30,7 +30,7 @@ BRF:6
 BRH:6
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/DataStructures/BinarySearchTree/index.js
+SF:DataStructures/BinarySearchTree/index.js
 FN:2,(anonymous_0)
 FN:10,(anonymous_1)
 FN:15,(anonymous_2)
@@ -176,7 +176,7 @@ BRF:44
 BRH:11
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/DataStructures/DoublyLinkedList/index.js
+SF:DataStructures/DoublyLinkedList/index.js
 FN:2,(anonymous_0)
 FN:10,(anonymous_1)
 FN:15,(anonymous_2)
@@ -236,7 +236,7 @@ BRF:8
 BRH:8
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/DataStructures/Graph/index.js
+SF:DataStructures/Graph/index.js
 FN:6,(anonymous_0)
 FN:20,(anonymous_1)
 FN:24,(anonymous_2)
@@ -337,7 +337,7 @@ BRF:8
 BRH:7
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/DataStructures/LinkedList/helpers.js
+SF:DataStructures/LinkedList/helpers.js
 FN:3,union
 FN:28,intersection
 FNF:2
@@ -392,7 +392,7 @@ BRF:12
 BRH:10
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/DataStructures/LinkedList/index.js
+SF:DataStructures/LinkedList/index.js
 FN:4,(anonymous_0)
 FN:8,(anonymous_1)
 FN:15,(anonymous_2)
@@ -614,7 +614,7 @@ BRF:49
 BRH:38
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/DataStructures/Node/index.js
+SF:DataStructures/Node/index.js
 FN:2,(anonymous_0)
 FNF:1
 FNH:1
@@ -628,7 +628,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/DataStructures/Queue/index.js
+SF:DataStructures/Queue/index.js
 FN:2,(anonymous_0)
 FN:6,(anonymous_1)
 FN:10,(anonymous_2)
@@ -664,7 +664,7 @@ BRF:4
 BRH:3
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/DataStructures/Stack/index.js
+SF:DataStructures/Stack/index.js
 FN:2,(anonymous_0)
 FN:7,(anonymous_1)
 FN:12,(anonymous_2)
@@ -707,7 +707,7 @@ BRF:6
 BRH:6
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/DataStructures/Trie/index.js
+SF:DataStructures/Trie/index.js
 FN:2,(anonymous_0)
 FN:10,(anonymous_1)
 FN:15,(anonymous_2)
@@ -788,7 +788,7 @@ BRF:9
 BRH:9
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/anagrams/index.js
+SF:challenges/anagrams/index.js
 FN:4,isAnagram
 FNF:1
 FNH:1
@@ -819,7 +819,7 @@ BRF:8
 BRH:8
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/balance-parentheses/index.js
+SF:challenges/balance-parentheses/index.js
 FN:1,isBalanced
 FNF:1
 FNH:1
@@ -857,7 +857,7 @@ BRF:15
 BRH:15
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/branch-sums/index.js
+SF:challenges/branch-sums/index.js
 FN:2,(anonymous_0)
 FN:8,(anonymous_1)
 FN:29,calculateBranchSums
@@ -918,7 +918,7 @@ BRF:15
 BRH:14
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/char-count/index.js
+SF:challenges/char-count/index.js
 FN:1,charCount
 FNF:1
 FNH:1
@@ -937,7 +937,7 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/closest-bst/index.js
+SF:challenges/closest-bst/index.js
 FN:3,findClosestValueInBst
 FN:21,(anonymous_1)
 FN:31,findClosestValueInBstTwo
@@ -1014,7 +1014,7 @@ BRF:24
 BRH:24
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/closest-bst/setup.js
+SF:challenges/closest-bst/setup.js
 FNF:0
 FNH:0
 DA:1,1
@@ -1026,7 +1026,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/convert-to-roman-numeral/index.js
+SF:challenges/convert-to-roman-numeral/index.js
 FN:1,convertToRoman
 FNF:1
 FNH:1
@@ -1045,7 +1045,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/depth-first-search/index.js
+SF:challenges/depth-first-search/index.js
 FN:2,(anonymous_0)
 FN:7,(anonymous_1)
 FN:12,(anonymous_2)
@@ -1069,7 +1069,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/find-first-non-repeat/index.js
+SF:challenges/find-first-non-repeat/index.js
 FN:2,findFirstUnique
 FN:12,findFirstUniqueDictionary
 FNF:2
@@ -1101,7 +1101,7 @@ BRF:6
 BRH:5
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/find-height-of-bst/index.js
+SF:challenges/find-height-of-bst/index.js
 FN:1,findHeight
 FNF:1
 FNH:1
@@ -1134,7 +1134,7 @@ BRF:6
 BRH:6
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/find-min/index.js
+SF:challenges/find-min/index.js
 FN:2,findMinWithSort
 FN:3,(anonymous_1)
 FN:6,findMinWithOutSort
@@ -1157,7 +1157,7 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/find-min-node-bst/index.js
+SF:challenges/find-min-node-bst/index.js
 FN:1,findMinNode
 FN:10,findMinNodeRecursive
 FNF:2
@@ -1185,7 +1185,7 @@ BRF:6
 BRH:4
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/find-second-max-num/index.js
+SF:challenges/find-second-max-num/index.js
 FN:3,findSecondMaximum
 FN:5,(anonymous_1)
 FN:9,findSecondMaximumSorted
@@ -1207,7 +1207,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/find-sum/index.js
+SF:challenges/find-sum/index.js
 FN:3,findSumBruteForce
 FN:14,findSum
 FNF:2
@@ -1240,7 +1240,7 @@ BRF:4
 BRH:4
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/generate-binary-numbers/index.js
+SF:challenges/generate-binary-numbers/index.js
 FN:3,genBinNumbers
 FNF:1
 FNH:1
@@ -1265,7 +1265,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/index-of/index.js
+SF:challenges/index-of/index.js
 FN:7,strStr
 FN:28,slidingStr
 FNF:2
@@ -1317,7 +1317,7 @@ BRF:20
 BRH:20
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/length-of-longest-substring/index.js
+SF:challenges/length-of-longest-substring/index.js
 FN:1,longestSubstring
 FNF:1
 FNH:1
@@ -1344,7 +1344,7 @@ BRF:4
 BRH:4
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/maximum-sum/index.js
+SF:challenges/maximum-sum/index.js
 FN:4,maximumSumBruteForce
 FN:67,maximumSum
 FNF:2
@@ -1383,7 +1383,7 @@ BRF:6
 BRH:6
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/merge-sorted-arrays/index.js
+SF:challenges/merge-sorted-arrays/index.js
 FN:8,merge
 FN:12,(anonymous_1)
 FN:15,mergeSortedLists
@@ -1429,7 +1429,7 @@ BRF:8
 BRH:6
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/merge-sorted-list/index.js
+SF:challenges/merge-sorted-list/index.js
 FN:8,ListNode
 FN:13,mergeSortedListsIterative
 FNF:2
@@ -1464,7 +1464,7 @@ BRF:6
 BRH:5
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/min-value-stack/index.js
+SF:challenges/min-value-stack/index.js
 FN:10,(anonymous_0)
 FN:19,(anonymous_1)
 FN:26,(anonymous_2)
@@ -1496,7 +1496,7 @@ BRF:4
 BRH:4
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/next-greater-element/index.js
+SF:challenges/next-greater-element/index.js
 FN:3,nextGreaterElementBruteForce
 FN:24,nextGreaterElementUsingStack
 FNF:2
@@ -1547,7 +1547,7 @@ BRF:10
 BRH:10
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/posfix-expression/index.js
+SF:challenges/posfix-expression/index.js
 FN:3,posFixExpression
 FNF:1
 FNH:1
@@ -1572,7 +1572,7 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/products-of-all-elements/index.js
+SF:challenges/products-of-all-elements/index.js
 FN:4,findProduct
 FN:5,(anonymous_1)
 FN:5,(anonymous_2)
@@ -1598,7 +1598,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/repeated-substring/index.js
+SF:challenges/repeated-substring/index.js
 FN:21,repeatedSubstringPattern
 FNF:1
 FNH:1
@@ -1620,7 +1620,7 @@ BRF:4
 BRH:4
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/reverse-first-n-elements-queue/index.js
+SF:challenges/reverse-first-n-elements-queue/index.js
 FN:2,reverseK
 FNF:1
 FNH:1
@@ -1649,7 +1649,7 @@ BRF:4
 BRH:4
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/rotate-right/index.js
+SF:challenges/rotate-right/index.js
 FN:7,rotateRight
 FNF:1
 FNH:1
@@ -1664,7 +1664,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/sort-negatives-positives/index.js
+SF:challenges/sort-negatives-positives/index.js
 FN:3,reArrange
 FN:4,(anonymous_1)
 FN:4,(anonymous_2)
@@ -1681,7 +1681,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/sort-stack/index.js
+SF:challenges/sort-stack/index.js
 FN:3,sortStack
 FN:4,(anonymous_1)
 FN:8,sortStackWithStack
@@ -1716,7 +1716,7 @@ BRF:2
 BRH:1
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/squares-sorted-array/index.js
+SF:challenges/squares-sorted-array/index.js
 FN:3,sortedSquares
 FN:4,(anonymous_1)
 FN:4,(anonymous_2)
@@ -1733,7 +1733,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/challenges/unique-values/index.js
+SF:challenges/unique-values/index.js
 FN:3,countUniqueValues
 FN:13,countUniqueValuesUsingPointers
 FNF:2
@@ -1767,7 +1767,7 @@ BRF:8
 BRH:8
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/utils/helpers.js
+SF:utils/helpers.js
 FN:1,pipe
 FN:2,(anonymous_1)
 FN:3,(anonymous_2)
@@ -1794,7 +1794,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/utils/index.js
+SF:utils/index.js
 FNF:0
 FNH:0
 DA:1,2
@@ -1804,7 +1804,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/andrew/workspace/ds-algrms/utils/logUtils.js
+SF:utils/logUtils.js
 FN:3,log
 FN:7,stringIt
 FNF:2
