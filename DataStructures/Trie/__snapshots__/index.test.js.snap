@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Trie Count should return a number of wordCount in trie 1`] = `1`;
+
+exports[`Trie Delete should delete a whole word from the trie 1`] = `
+Trie {
+  "root": Node {
+    "child": Object {
+      "c": Node {
+        "child": Object {
+          "a": Node {
+            "child": Object {
+              "r": Node {
+                "child": Object {},
+                "fullWord": null,
+                "key": "r",
+              },
+            },
+            "fullWord": null,
+            "key": "a",
+          },
+        },
+        "fullWord": null,
+        "key": "c",
+      },
+    },
+    "fullWord": null,
+    "key": null,
+  },
+  "wordCount": 0,
+}
+`;
+
+exports[`Trie Delete should delete correct child nodes 1`] = `
+Trie {
+  "root": Node {
+    "child": Object {
+      "c": Node {
+        "child": Object {
+          "a": Node {
+            "child": Object {
+              "r": Node {
+                "child": Object {},
+                "fullWord": "car",
+                "key": "r",
+              },
+            },
+            "fullWord": null,
+            "key": "a",
+          },
+          "u": Node {
+            "child": Object {
+              "t": Node {
+                "child": Object {},
+                "fullWord": null,
+                "key": "t",
+              },
+            },
+            "fullWord": null,
+            "key": "u",
+          },
+        },
+        "fullWord": null,
+        "key": "c",
+      },
+    },
+    "fullWord": null,
+    "key": null,
+  },
+  "wordCount": 1,
+}
+`;
+
+exports[`Trie Insert should insert a new word 1`] = `
+Trie {
+  "root": Node {
+    "child": Object {
+      "c": Node {
+        "child": Object {
+          "a": Node {
+            "child": Object {
+              "r": Node {
+                "child": Object {},
+                "fullWord": "car",
+                "key": "r",
+              },
+            },
+            "fullWord": null,
+            "key": "a",
+          },
+        },
+        "fullWord": null,
+        "key": "c",
+      },
+    },
+    "fullWord": null,
+    "key": null,
+  },
+  "wordCount": 1,
+}
+`;
+
+exports[`Trie Insert should insert duplicate wordCount once 1`] = `
+Trie {
+  "root": Node {
+    "child": Object {
+      "c": Node {
+        "child": Object {
+          "a": Node {
+            "child": Object {
+              "r": Node {
+                "child": Object {},
+                "fullWord": "car",
+                "key": "r",
+              },
+            },
+            "fullWord": null,
+            "key": "a",
+          },
+        },
+        "fullWord": null,
+        "key": "c",
+      },
+    },
+    "fullWord": null,
+    "key": null,
+  },
+  "wordCount": 1,
+}
+`;
+
+exports[`Trie Insert should insert multiple wordCount 1`] = `
+Trie {
+  "root": Node {
+    "child": Object {
+      "c": Node {
+        "child": Object {
+          "a": Node {
+            "child": Object {
+              "r": Node {
+                "child": Object {},
+                "fullWord": "car",
+                "key": "r",
+              },
+            },
+            "fullWord": null,
+            "key": "a",
+          },
+        },
+        "fullWord": null,
+        "key": "c",
+      },
+      "s": Node {
+        "child": Object {
+          "h": Node {
+            "child": Object {
+              "o": Node {
+                "child": Object {
+                  "e": Node {
+                    "child": Object {},
+                    "fullWord": "shoe",
+                    "key": "e",
+                  },
+                },
+                "fullWord": null,
+                "key": "o",
+              },
+            },
+            "fullWord": null,
+            "key": "h",
+          },
+        },
+        "fullWord": null,
+        "key": "s",
+      },
+    },
+    "fullWord": null,
+    "key": null,
+  },
+  "wordCount": 2,
+}
+`;
+
+exports[`Trie New Trie should insatiate a new Trie 1`] = `
+Trie {
+  "root": Node {
+    "child": Object {},
+    "fullWord": null,
+    "key": null,
+  },
+  "wordCount": 0,
+}
+`;
