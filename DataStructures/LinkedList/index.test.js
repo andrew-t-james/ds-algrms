@@ -17,36 +17,42 @@ describe('LinkedList', () => {
     const list = new LinkedList()
     list.insertAtHead(1)
     expect(list.isEmpty).toBe(false)
+    list.insertAtHead(2)
+    expect(list.head.data).toBe(2)
+    expect(list.head.next.data).toBe(1)
   })
 
   test('should insert new node at head', () => {
     const list = new LinkedList()
     expect(list).toEqual({ head: null })
     list.insertAtHead(1)
-    expect(list).toEqual({ head: { data: 1, next: null } })
+    expect(list).toMatchSnapshot()
     list.insertAtHead(2)
-    expect(list).toEqual({ head: { data: 2, next: { data: 1, next: null } } })
+    expect(list).toMatchSnapshot()
   })
 
   test('should insert new node at tail', () => {
     const list = new LinkedList()
     expect(list).toEqual({ head: null })
-    list.insertAtTail(1)
-    expect(list).toEqual({ head: { data: 1, next: null } })
+    list.insert(1)
+    list.insert(3)
+    expect(list).toEqual({ head: { data: 1, next: { data: 3, next: null } } })
     list.insertAtTail(2)
-    expect(list).toEqual({ head: { data: 1, next: { data: 2, next: null } } })
+    expect(list).toEqual({
+      head: { data: 1, next: { data: 3, next: { data: 2, next: null } } },
+    })
   })
 
   test('should insert new node at position', () => {
     const list = new LinkedList()
     expect(list).toEqual({ head: null })
-    list.insertAtHead(1)
+    list.insert(1)
     expect(list).toEqual({ head: { data: 1, next: null } })
-    list.insertAtTail(2)
+    list.insert(2)
     expect(list).toEqual({ head: { data: 1, next: { data: 2, next: null } } })
     list.insertAtPosition(3, 1)
     expect(list).toEqual({
-      head: { data: 1, next: { data: 3, next: { data: 2, next: null } } }
+      head: { data: 1, next: { data: 3, next: { data: 2, next: null } } },
     })
   })
 
@@ -57,7 +63,7 @@ describe('LinkedList', () => {
     list.insertAtTail(2)
     list.insertAtTail(3)
     expect(list).toEqual({
-      head: { data: 1, next: { data: 2, next: { data: 3, next: null } } }
+      head: { data: 1, next: { data: 2, next: { data: 3, next: null } } },
     })
     expect(list.search(1)).toBe(true)
     expect(list.search(3)).toBe(true)
@@ -71,7 +77,7 @@ describe('LinkedList', () => {
     list.insertAtTail(2)
     list.insertAtTail(3)
     expect(list).toEqual({
-      head: { data: 1, next: { data: 2, next: { data: 3, next: null } } }
+      head: { data: 1, next: { data: 2, next: { data: 3, next: null } } },
     })
     expect(list.recursiveSearch(list.head, 1)).toBe(true)
     expect(list.recursiveSearch(list.head, 3)).toBe(true)
@@ -85,11 +91,11 @@ describe('LinkedList', () => {
     list.insertAtTail(2)
     list.insertAtTail(3)
     expect(list).toEqual({
-      head: { data: 1, next: { data: 2, next: { data: 3, next: null } } }
+      head: { data: 1, next: { data: 2, next: { data: 3, next: null } } },
     })
     list.deleteAtHead()
     expect(list).toEqual({
-      head: { data: 2, next: { data: 3, next: null } }
+      head: { data: 2, next: { data: 3, next: null } },
     })
   })
 
@@ -100,11 +106,11 @@ describe('LinkedList', () => {
     list.insertAtTail(2)
     list.insertAtTail(3)
     expect(list).toEqual({
-      head: { data: 1, next: { data: 2, next: { data: 3, next: null } } }
+      head: { data: 1, next: { data: 2, next: { data: 3, next: null } } },
     })
     list.deleteAtTail()
     expect(list).toEqual({
-      head: { data: 1, next: { data: 2, next: null } }
+      head: { data: 1, next: { data: 2, next: null } },
     })
   })
 
@@ -163,7 +169,7 @@ describe('LinkedList', () => {
     expect(list.detectLoop()).toBe(true)
   })
 
-  test('should return mid node', () => {
+  test.only('should return mid node', () => {
     const list = new LinkedList()
     expect(list).toEqual({ head: null })
 
@@ -196,7 +202,7 @@ describe('LinkedList', () => {
     const list = new LinkedList()
     expect(list).toEqual({ head: null })
 
-    const dataList = [1, 2, 2, 3, 3, 4, 4]
+    const dataList = [1, 2, 3, 2, 6, 2, 8, 6]
 
     for (let data of dataList) {
       list.insertAtTail(data)

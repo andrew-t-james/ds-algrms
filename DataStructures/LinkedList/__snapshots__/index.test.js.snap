@@ -69,6 +69,27 @@ LinkedList {
 }
 `;
 
+exports[`LinkedList should insert new node at head 1`] = `
+LinkedList {
+  "head": Node {
+    "data": 1,
+    "next": null,
+  },
+}
+`;
+
+exports[`LinkedList should insert new node at head 2`] = `
+LinkedList {
+  "head": Node {
+    "data": 2,
+    "next": Node {
+      "data": 1,
+      "next": null,
+    },
+  },
+}
+`;
+
 exports[`LinkedList should remove duplicate nodes in a linked list 1`] = `
 LinkedList {
   "head": Node {
@@ -76,16 +97,19 @@ LinkedList {
     "next": Node {
       "data": 2,
       "next": Node {
-        "data": 2,
+        "data": 3,
         "next": Node {
-          "data": 3,
+          "data": 2,
           "next": Node {
-            "data": 3,
+            "data": 6,
             "next": Node {
-              "data": 4,
+              "data": 2,
               "next": Node {
-                "data": 4,
-                "next": null,
+                "data": 8,
+                "next": Node {
+                  "data": 6,
+                  "next": null,
+                },
               },
             },
           },
@@ -105,8 +129,11 @@ LinkedList {
       "next": Node {
         "data": 3,
         "next": Node {
-          "data": 4,
-          "next": null,
+          "data": 6,
+          "next": Node {
+            "data": 8,
+            "next": null,
+          },
         },
       },
     },

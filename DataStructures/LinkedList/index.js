@@ -6,243 +6,180 @@ class LinkedList {
   }
 
   insertAtHead(data) {
-    const tempNode = new Node(data)
-    tempNode.next = this.head
-    this.head = tempNode
-    return this
+    const newNode = new Node(data)
+    newNode.next = this.head
+    this.head = newNode
   }
 
   insertAtTail(data) {
-    const node = new Node(data)
-    if (this.isEmpty) {
-      this.head = node
+    const newNode = new Node(data)
+    let current = this.getHeadNode
+    let previous
+
+    if (current === null) {
+      this.head = newNode
     } else {
-      let current = this.head
-      while (current.next !== null) {
+      while (current) {
+        previous = current
         current = current.next
       }
-      current.next = node
+      newNode.next = current
+      previous.next = newNode
+    }
+  }
+
+  insert(data) {
+    let current = this.getHeadNode
+    let previous
+    const newNode = new Node(data)
+
+    if (current === null) {
+      this.head = newNode
+    } else {
+      while (current !== null) {
+        previous = current
+        current = current.next
+      }
+      previous.next = newNode
     }
 
     return this
   }
 
   insertAtPosition(data, pos) {
-    const node = new Node(data)
-    if (this.isEmpty) {
-      this.head = node
-    } else {
-      let current = this.getHeadNode
-      let previous
-      let count = 0
-      while (count < pos) {
-        previous = current
-        current = current.next
-        count++
+    let current = this.getHeadNode
+    let previous
+    let count = 0
+    const newNode = new Node(data)
+    while (current !== null) {
+      if (count === pos) {
+        newNode.next = current
+        previous.next = newNode
       }
-
-      node.next = current
-      previous.next = node
+      previous = current
+      current = current.next
+      count++
     }
-
-    return this
   }
 
   search(data) {
-    if (this.isEmpty) return false
     let current = this.getHeadNode
-    if (current.data === data) return true
-    while (current.next !== null) {
+    let searchResult = false
+    while (current !== null) {
+      if (current.data === data) {
+        searchResult = true
+        break
+      }
       current = current.next
-      if (current.data === data) return true
     }
 
-    return false
+    return searchResult
   }
 
   reverse() {
-    if (this.isEmpty) return this
     let current = this.getHeadNode
     let previous = null
-    let next = null
-
+    let tmp
     while (current !== null) {
-      next = current.next
+      // save next link
+      tmp = current.next
       current.next = previous
       previous = current
-      current = next
+      current = tmp
     }
-
-    this.setHead(previous)
-    return this
+    this.head = previous
   }
 
   detectLoop() {
-    let slow = this.getHeadNode
-    let fast = this.getHeadNode
-
-    while (fast && fast.next) {
-      slow = slow.next
-      fast = fast.next.next
-      if (slow === fast) return true
+    let current = this.getHeadNode
+    let hasLoop = false
+    const uniqueVals = new Set()
+    while (current !== null) {
+      if (uniqueVals.has(current.data)) {
+        hasLoop = true
+        break
+      }
+      uniqueVals.add(current.data)
+      current = current.next
     }
-
-    return false
+    return hasLoop
   }
 
-  setHead(node) {
-    this.head = node
-  }
+  setHead(node) {}
 
   recursiveSearch(node, data) {
-    // base case:
-    if (node === null) return false
+    let foundNode = false
+    function rSearchHelper(current) {
+      if (current === null) return
+      if (current.data === data) {
+        foundNode = true
+        return
+      }
+      rSearchHelper(current.next)
+    }
 
-    if (node.data === data) return true
-
-    return this.recursiveSearch(node.next, data)
+    rSearchHelper(node)
+    return foundNode
   }
 
   deleteAtHead() {
-    let headNode = this.getHeadNode
-
-    this.head = headNode.next
-
-    return this
+    let current = this.getHeadNode
+    current = this.head.next
+    this.head = current
   }
 
   deleteAtTail() {
-    if (this.isEmpty) return false
-
     let current = this.getHeadNode
     let previous
-
-    if (current.next === null) {
-      this.deleteAtHead()
-      return this
-    }
-
-    while (current.next !== null) {
+    while (current !== null) {
+      if (current.next === null) {
+        previous.next = null
+      }
       previous = current
       current = current.next
     }
-
-    previous.next = null
-
-    return this
   }
 
   deleteByValue(value) {
-    if (this.isEmpty) return false
-
-    let current = this.getHeadNode
-    let deleted = false
-
-    if (current.data === value) {
-      this.deleteAtHead()
-      deleted = true
-    }
-
-    while (current.next !== null) {
-      if (current.next.data === value) {
-        current.next = current.next.next
-        return true
-      }
-      current = current.next
-    }
-
-    return deleted
-  }
-
-  findMidNodeBruteForce() {
-    let current = this.getHeadNode
-    let count = 0
-    let midNode = null
-
-    if (this.isEmpty) return 'Empty LinkedList'
-
-    while (current !== null) {
-      current = current.next
-      count++
-    }
-
-    current = this.getHeadNode
-
-    let mid = Math.round(count / 2)
-
-    let currentCount = 0
-
-    while (current !== null) {
-      currentCount++
-
-      if (currentCount === mid) {
-        midNode = current.data
-      }
-
-      current = current.next
-    }
-
-    return midNode
-  }
-
-  findMidNode() {
-    let slow = this.getHeadNode
-    let fast = this.getHeadNode
-
-    if (this.isEmpty) return 'Empty LinkedList'
-
-    if (slow.next === null) {
-      return slow.data
-    }
-
-    while (
-      slow.next !== null &&
-      fast.next !== null &&
-      fast.next.next !== null
-    ) {
-      slow = slow.next
-      fast = fast.next.next
-    }
-
-    return slow.data
-  }
-
-  removeDuplicatesWithSet() {
     let current = this.getHeadNode
     let previous
-    const uniqueVals = new Set()
+    let deletedNode = false
+    if (current === null) {
+      return deletedNode
+    } else if (current.data === value) {
+      this.head = current.next
+      deletedNode = true
+    } else {
+      while (current.data !== value) {
+        previous = current
+        current = current.next
+      }
+      if (current === null) {
+        return deletedNode
+      }
+      previous.next = current.next
+      deletedNode = true
+    }
+    return deletedNode
+  }
 
-    if (this.isEmpty) return 'Empty LinkedList'
+  findMidNode() {}
 
+  removeDuplicatesWithSet() {
+    const dupSet = new Set()
+    let current = this.getHeadNode
+    let previous
     while (current.next !== null) {
-      uniqueVals.add(current.data)
+      dupSet.add(current.data)
       previous = current
       current = current.next
-
-      if (uniqueVals.has(current.data)) {
+      if (dupSet.has(current.data)) {
         previous.next = current.next
       }
     }
-
-    return this
   }
 
-  getNthNodeFromEnd(node) {
-    let current = this.getHeadNode
-    let nodeData = null
-    let count = 0
-    if (this.isEmpty) return 'Empty List'
-
-    while (current !== null) {
-      if (count === node) {
-        nodeData = current.data
-      }
-      count++
-      current = current.next
-    }
-
-    return nodeData
-  }
+  getNthNodeFromEnd(node) {}
 
   get getHeadNode() {
     return this.head
